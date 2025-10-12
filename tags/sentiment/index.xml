@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sentiment on Text Machine Lab</title>
+    <link>/lab2/tags/sentiment/</link>
+    <description>Recent content in Sentiment on Text Machine Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="/lab2/tags/sentiment/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RuSentiment: An Enriched Sentiment Analysis Dataset for Social Media in Russian</title>
+      <link>/lab2/projects/rusentiment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/projects/rusentiment/</guid>
+      <description>We present RuSentiment, a new dataset for sentiment analysis of social media posts in Russian. RuSentiment is currently the largest in its class for Russian, with 30,521 posts annotated with Fleiss&amp;rsquo; kappa of 0.58 (3 annotations per post). To diversify the dataset, 6,749 posts were pre-selected with an active learning-style strategy. We report baseline classification results, and we also release the best-performing embeddings trained on 3.2B tokens of Russian VKontakte posts.</description>
+    </item>
+    
+    <item>
+      <title>TwitterHawk - a Twitter Sentiment Analysis System</title>
+      <link>/lab2/projects/twitterhawk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/projects/twitterhawk/</guid>
+      <description>TwitterHawk is an open-source natural language processing system for Twitter sentiment analysis. This system was developed for the SemEval-2015 Task 10: Sentiment Analysis in Twitter. The system placed 1st in topic-based sentiment classification (Subtask C), and ranked 6th out of 40 in identifying the sentiment of sarcastic tweets (for Subtask B). The system also placed 5th/11 for Subtask A (sentiment of a tweet&#39;s sub-phrase), 10th/40 for Subtask B (sentiment of a full tweet), and 3rd/6 for Subtask D (summarization of Subtask C).</description>
+    </item>
+    
+  </channel>
+</rss>

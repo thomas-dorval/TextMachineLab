@@ -1,1 +1,191 @@
+<!DOCTYPE html>
+<head>
+	<meta name="generator" content="Hugo 0.61.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  
+  <link rel="stylesheet" type="text/css" href="/lab2/css/style.css" />
+  <link rel="shortcut icon" href="/lab2/img/icons/browser_icon.ico"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head><!DOCTYPE html>
+<head>
+  <script>
+  function toggleMenu() {
+      var x = document.getElementById("navmenu");
+      if (x.className === "menu-items") {
+          x.className += " responsive";
+      } else {
+          x.className = "menu-items";
+      }
+  }
+  </script>
+</head>
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container-fluid">
+    <a href="/lab2/">
+      <img src="/lab2//img/icons/text-machine-White-min.png" hspace="20" class='navbar-logo'>
+    </a>
+    <div class="menu-items" id="navmenu">
+      <div class="items-wrapper">
+      <a href="/lab2/"> <span>Home</span></a>
+      <a href="/lab2/projects/"><span>Projects</span></a>
+      <a href="/lab2/events/"><span>Events</span></a>
+      <a href="/lab2/people/"><span>People</span></a>
+      <a href="/lab2/publications/"><span>Publications</span></a>
+      <a href="https://text-machine-lab.github.io/blog/" target="_blank"><span>Blog<img class="blog-icon" src="/lab2/img/icons/external-link.png"></span></a>
+      <a href="/lab2/contact/"><span>Contact</span></a>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+<body>
 
+  <div class="container home">
+      <div class="row">
+          <div class="col-md-5 col-lg-5 col-sm-7 col-sm-push-3 col-md-push-2 col-lg-push-2 main">
+            <h1>Text Machine Lab</h1>
+             <p>The Text Machine Lab at UMass Lowell conducts research in deep learning for for natural language processing, with a focus on representation learning and model interpretability. Our current and past projects span the following research areas:
+				<li>model interpretability and representation learning</li>
+				<li>efficient large model training</li>
+                <li>text-based temporal reasoning, conversational agents, argument mining</li>
+                <li>clinical natural language processing, including information extraction, and predictive modeling using clinical patient records.</li>
+                <li>NLP for educational applications, digital knowledge and sentiment tracking for digital humanities and social science.</li>
+            </p>
+          </div>
+
+          <div class="col-md-3 col-lg-3 col-sm-3 col-sm-pull-7 col-md-pull-6 col-lg-pull-6">
+            <div class="homepage-card">
+              <a href="https://www.cs.uml.edu/~arum/" target="_blank"><img class="homepage-pic" src="/lab2//img/people/anna.jpg"></a>
+              <a href="https://www.cs.uml.edu/~arum/" target="_blank"><h4 style="text-align: center;">Anna Rumshisky</h4></a>
+              <p style="text-align: center;">PI</p>
+            </div>
+          </div>
+
+          <div class="col-sm-10 col-md-4 col-lg-4 news">
+            <div class="news-container">
+              <h2>News</h2>
+				   <span class="date"></span>
+                  <p>The second New England NLP Meetup <a href="https://nenlp.github.io/spr2023/">NENLP Meetup</a> was held in April 2023 at UMass Lowell.</p>
+				  
+				  <span class="date"></span>
+                  <p>The first New England NLP Meetup <a href="https://nenlp.github.io/spr2022/">NENLP Meetup</a> was held in April 2022 at MIT.</p>
+				  
+				  <span class="date"></span>
+                  <p>We orgnized the Clinial NLP Workshop at NAACL 2022 <a href="https://clinical-nlp.github.io/2023/">Clinial NLP Workshop 2022</a> .</p>
+				  
+				  <span class="date"></span>
+                  <p>We conducted the Insights from Negative results from NLP workshop 2022 <a href="https://insights-workshop.github.io/">Insights from Negative results from NLP workshop</a> at ACL 2022.</p>
+				  
+				  <span class="date"></span>
+                  <p>Anna Rumshisky served as Program Chair for NAACL 2021.</p>
+				  
+				  <span class="date"></span>
+                  <p>All news prior to 2019 can be found in our <a href="archived_news.html">Archived News</a> page.</p>
+				  
+                  
+                  <!-- <span class="date">Nov 2019</span>
+                  <p>Be on the lookout for our tutorial on the dataset explosion in QA, NLI, and commonsense reasoning, accepted to <a href="https://coling2020.org/">COLING 2020</a>! This will be both a guide for practitioners who just want to grab and use smth, and a survey of the latest techniques for future datasets</p>
+
+                  
+                  <span class="date">Nov 2019</span>
+                  <p>We are organizing a new EMNLP 2020 workshop <a href="https://insights-workshop.github.io/">Insights from Negative results from NLP</a>. Invited talks by Rada Mihalcea and Byron Wallace! Special focus: breaking pre-trained meaning representations.</p>
+
+                  
+                  <span class="date">Nov 2019</span>
+                  <p>The next <a href="https://clinical-nlp.github.io/2020/">Clinical Natural Language Processing Workshop</a> will be held at EMNLP 2020. Submission deadline: <strong>August 15, 2020</strong>.</p>
+
+                  
+                  <span class="date">Feb 2019</span>
+                  <p>The <a href="https://deephack.me/ciss2">2nd International Summer School for Conversational Intelligence (CISS 2019)</a> will be held at UMass Lowell, <strong>June 24-29, 2019</strong>. Free to qualifying students! Registration opens <strong>Feb 15, 2019</strong>. Qualifying round begins <strong>Feb 25, 2019</strong>. Qualifying round ends <strong>Mar 25, 2019</strong>.</p>
+
+                  
+                  <span class="date">Dec 2018</span>
+                  <p>The next <a href="https://clinical-nlp.github.io/2019/">Clinical Natural Language Processing Workshop</a> will be held at NAACL 2019. Submission deadline: <strong>Mar 6, 2019.</strong></p>
+
+                  
+                  <span class="date">Jun 2018</span>
+                  <p>Text Machine Lab is organizing a SemEval-2017 task <a href="https://www.youtube.com/watch?v=uYZTqYxo9AU">Normalization of Medical Concepts in Clinical Narrative</a> (<a href="http://alt.qcri.org/semeval2017/task6/">Task 11</a>). Help spread the word!</p>
+
+                  
+                  <span class="date">May 2018</span>
+                  <p>LREC 2018 Tutorial: Distributional compositional semantics in the age of word embeddings: tasks, resources and methodology.</p>
+
+                  
+                  <span class="date">Apr 2018</span>
+                  <p>Text Machine Lab is <a href="https://text-machine.cs.uml.edu/lab/hiring.html">hiring</a>! Two PhD positions open, available immediately.</p>
+
+                  
+                  <span class="date">Jan 2018</span>
+                  <p>We are a <a href="https://text-machine.cs.uml.edu/naclo/">hosting site</a> for for the <a href="http://nacloweb.org/">North American Computational Linguistics Olympiad (NACLO)</a></p>
+
+                  
+                  <span class="date">Jan 2017</span>
+                  <p>We are going to serve as a <a href="https://text-machine.cs.uml.edu/naclo/">hosting site</a> for for the <a href="http://nacloweb.org/">North American Computational Linguistics Olympiad (NACLO)</a>. <strong>Please register to participate by 1 pm EST on January 25, 2017</strong>. Check out <a href="https://text-machine.cs.uml.edu/naclo/">time, location, and other details</a>.</p>
+
+                  
+                  <span class="date">Jun 2016</span>
+                  <p>Jun 2016. Text Machine Lab is organizing a SemEval-2017 task <a href="http://alt.qcri.org/semeval2017/task6/">#HashtagWars: Learning a Sense of Humor</a> (Task 6). Training data for the task was released on <strong>September 5, 2016</strong>. Evaluation will start on <strong>January 9, 2017</strong>. Please register to participate!</p>
+
+                  
+                  <span class="date">Jun 2016</span>
+                  <p>We are organizing a workshop on <a href="https://text-machine-lab.github.io/ClinicalNLP2016/">Clinical Natural Language Processing at COLING 2016</a>. <strong>Submission deadline is September 25, 2016</strong>. Please submit your work!</p>
+
+                  
+                  <span class="date">Jan 2016</span>
+                  <p>Text Machine Lab's system for measuring semantic similarity of text (<a href="http://aclweb.org/anthology/S/S16/S16-1115.pdf">SimiHawk</a>) placed <strong>7th out of 119</strong> systems submitted to the <a href="http://aclweb.org/anthology/S/S16/S16-1081.pdf">Semantic Textual Similarity task in SemEval 2016 (Task 1)</a>, placing our team 6th out of 43 participating teams. Congrats to Peter Potash, Alexey Romanov, and Willie Boag!</p>
+
+                  
+                  <span class="date">Jan 2015</span>
+                  <p>Text Machine Lab's system for Twitter sentiment analysis (<a href="https://text-machine.cs.uml.edu/twitterhawk/">TwitterHawk</a>) <strong>takes 1st place</strong> in <a href="http://alt.qcri.org/semeval2015/task10/">SemEval2015 Task 10C (Topic-Based Message Polarity Classification)</a>. Congrats to William Boag and Peter Potash!</p>
+
+                  
+                  <span class="date">Nov 2014</span>
+                  <p>CliNER system for clinical named entity recognition released <a href="https://www.i2b2.org/NLP/HeartDisease/">@2014 i2b2/UTHealth Shared-Tasks and Workshop on Challenges in Natural Language Processing for Clinical Data</a>.</p>
+
+                  
+                  <span class="date">May 2014</span>
+                  <p>LREC 2014 Tutorial: Deep Semantic Annotation with Shallow Methods.</p>
+
+                  
+                  <span class="date">Nov 2013</span>
+                  <p>Dagstuhl seminar on <a href="https://www.dagstuhl.de/de/programm/kalender/semhp/?semnr=13462">Computational Models of Language Meaning in Context</a>.</p>
+				-->
+                  
+            </div>
+          </div>
+        </div>
+
+
+
+    
+      
+
+          
+    </div>
+</body><!DOCTYPE html>
+  <footer class="site-footer">
+    <center><a href="https://www.uml.edu/" target="_blank">
+      <img src="/lab2//img/icons/uml.png" alt="UML" height="42" ></center></a>
+    <div class="container">
+      <p class="powered-by">
+        &copy Text Machine Lab. Powered by Hugo.
+      </p>
+    </div>
+  </footer>
+
+<script type="text/javascript">
+  var sc_project=3236841; 
+  var sc_invisible=1; 
+  var sc_partition=35; 
+  var sc_security="5c358dce"; 
+  var sc_text=2; 
+  </script>
+  
+<script type="text/javascript" src="http://www.statcounter.com/counter/counter_xhtml.js"></script><noscript><div class="statcounter"><a class="statcounter" href="http://www.statcounter.com/"><img class="statcounter" src="http://c36.statcounter.com/3236841/0/5c358dce/0/" alt="screen resolution stats" /></a></div></noscript>

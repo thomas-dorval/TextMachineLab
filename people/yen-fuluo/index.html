@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/lab2/css/style.css" />
+  <link rel="shortcut icon" href="/lab2/img/icons/browser_icon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<!DOCTYPE html>
+
+<head>
+  <script>
+    function toggleMenu() {
+      var x = document.getElementById("navmenu");
+      if (x.className === "menu-items") {
+        x.className += " responsive";
+      } else {
+        x.className = "menu-items";
+      }
+    }
+  </script>
+</head>
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container-fluid">
+    <a href="/lab2/">
+      <img src="/lab2//img/icons/text-machine-White-min.png" hspace="20" class='navbar-logo'>
+    </a>
+    <div class="menu-items" id="navmenu">
+      <div class="items-wrapper">
+        <a href="/lab2/"> <span>Home</span></a>
+        <a href="/lab2/projects/"><span>Projects</span></a>
+        <a href="/lab2/events/"><span>Events</span></a>
+        <a href="/lab2/people/"><span>People</span></a>
+        <a href="/lab2/publications/"><span>Publications</span></a>
+        <a href="https://text-machine-lab.github.io/blog/" target="_blank"><span>Blog<img class="blog-icon"
+              src="/lab2/img/icons/external-link.png"></span></a>
+        <a href="/lab2/contact/"><span>Contact</span></a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+</body>
+<div class="container personal">
+
+  <div class="row">
+    <div class="profile-column col-xs-12 col-sm-3 col-md-4 col-lg-3">
+      <h1 class="name-col-1">Yen-Fu Luo</h1>
+      <img class="photo-personal" src=/lab2//img/people/yenfu_new.jpg>
+      <div class="contacts">
+        <a href="mailto:yluo@cs.uml.edu"><img class="share-icon" src="/lab2//img/icons/email.png"></a>
+      </div>
+
+      <div class="graduation">
+        <p>Graduated: Oct 2018</p>
+        <p>Degree: PhD</p>
+      </div>
+
+    </div>
+    <div class="info-column col-xs-12 col-sm-9 col-md-8 col-lg-9">
+      <h1 class="name-col-2">Yen-Fu Luo</h1>
+      <p>
+      <p>My expertise includes Natural Language Processing, Machine Learning, and Data Visualization. My thesis:
+        &ldquo;Mining the Clinical Narrative: Mortality Prediction and Concept Normalization&rdquo;.</p>
+      </p>
+
+      <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Skills')" id="defaultOpen">Skills</button>
+        <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
+        <button class="tablinks" onclick="openTab(event, 'Publications')">Publications</button>
+      </div>
+
+
+      <div id="Skills" class="tabcontent skills-content">
+        <div class="row">
+          <div class="skill-name">
+            <p>Programming</p>
+          </div>
+          <div class="skill-description">
+            <span class="skill">Java</span>
+            <span class="skill">Python</span>
+            <span class="skill">Matlab</span>
+            <span class="skill">R</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="skill-name">
+            <p>Machine Learning</p>
+          </div>
+          <div class="skill-description">
+            <span class="skill">TensorFlow</span>
+            <span class="skill">Scikit-learn</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="skill-name">
+            <p>Databases</p>
+          </div>
+          <div class="skill-description">
+            <span class="skill">MongoDB</span>
+            <span class="skill">MySQL</span>
+            <span class="skill">PostgreSQL</span>
+            <span class="skill">Oracle</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="skill-name">
+            <p>Languages</p>
+          </div>
+          <div class="skill-description">
+            <span class="skill">Chinese</span>
+            <span class="skill">English</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="Projects" class="tabcontent">
+        <ul>
+          <li>
+            <h4 class="project-name"><a href="/lab2/projects/conceptnorm/">Normalization of Medical Concepts in Clinical
+                Narrative</a></h4>
+            <p>We apply deep learning to the problem of normalization of medical records, i.e. mapping of clinical terms
+              in medical notes to standardized medical vocabularies.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div id="Publications" class="tabcontent">
+        <div class="publication">
+          <img src="/lab2//img/icons/doc.png">
+          <span class="author-container-pub">
+            <span class="author pub">Y.-F. Luo</span>
+            <span class="author pub">A. Rumshisky</span>
+            <span class="author pub">M. Gronas</span>
+          </span>
+          <span>
+            Catching the Red Priest: Using Historical Editions of Encyclopaedia Britannica to Track the Evolution of
+            Reputations.
+          </span>
+          <span>
+            <em>The 9th Workshop on Language Technology for Cultural Heritage, Social Sciences, and Humanities.
+              ACL-IJCNLP 2015.</em>
+          </span>
+          <div class="citing">
+            <button onclick="window.open('http:\/\/www.aclweb.org\/anthology\/W15-3701.pdf','_blank');"
+              type="button">PDF</button>
+            <button type="button" data-toggle="collapse" data-target="#pub0_2015">BibTeX</button>
+            <div id="pub0_2015" class="collapse">
+              <pre><p>@inproceedings{luo2015catching,
+title={Catching the Red Priest: Using Historical Editions of Encyclopaedia Britannica to Track the Evolution of Reputations},
+author={Luo, Yen-Fu and Rumshisky, Anna and Gronas, Mikhail},
+booktitle={Proceedings of the 9th SIGHUM Workshop on Language Technology for Cultural Heritage, Social Sciences, and Humanities (LaTeCH)},
+pages={1&ndash;9},
+year={2015}
+}</p></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="publication">
+          <img src="/lab2//img/icons/doc.png">
+          <span class="author-container-pub">
+            <span class="author pub">Y.-F. Luo</span>
+            <span class="author pub">A. Rumshisky</span>
+          </span>
+          <span>
+            Interpretable Topic Features for Post-ICU Mortality Prediction.
+          </span>
+          <span>
+            <em>AMIA 2016.</em>
+          </span>
+          <div class="citing">
+            <button
+              onclick="window.open('https:\/\/www.ncbi.nlm.nih.gov\/pmc\/articles\/PMC5333300\/pdf\/2500071.pdf','_blank');"
+              type="button">PDF</button>
+            <button type="button" data-toggle="collapse" data-target="#pub1_2016">BibTeX</button>
+            <div id="pub1_2016" class="collapse">
+              <pre><p>@inproceedings{luo_interpretable_2016,
+author = &ldquo;Luo, Yen-Fu and Rumshisky, Anna&rdquo;,
+title = &ldquo;Interpretable {Topic} {Features} for {Post}-{ICU} {Mortality} {Prediction}&quot;,
+booktitle = &ldquo;{AMIA} 2016, {American} {Medical} {Informatics} {Association} {Annual} {Symposium}, {Chicago}, {IL}, {USA}, {November} 12-16, 2016&rdquo;,
+year = &ldquo;2016&rdquo;
+}</p></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+<script>
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+
+  document.getElementById("defaultOpen").click();
+</script>
+<!DOCTYPE html>
+<footer class="site-footer">
+  <center><a href="https://www.uml.edu/" target="_blank">
+      <img src="/lab2//img/icons/uml.png" alt="UML" height="42"></center></a>
+  <div class="container">
+    <p class="powered-by">
+      &copy Text Machine Lab. Powered by Hugo.
+    </p>
+  </div>
+</footer>

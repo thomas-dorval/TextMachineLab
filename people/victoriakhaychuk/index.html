@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/lab2/css/style.css" />
+  <link rel="shortcut icon" href="/lab2/img/icons/browser_icon.ico"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head><!DOCTYPE html>
+<head>
+  <script>
+  function toggleMenu() {
+      var x = document.getElementById("navmenu");
+      if (x.className === "menu-items") {
+          x.className += " responsive";
+      } else {
+          x.className = "menu-items";
+      }
+  }
+  </script>
+</head>
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container-fluid">
+    <a href="/lab2/">
+      <img src="/lab2//img/icons/text-machine-White-min.png" hspace="20" class='navbar-logo'>
+    </a>
+    <div class="menu-items" id="navmenu">
+      <div class="items-wrapper">
+      <a href="/lab2/"> <span>Home</span></a>
+      <a href="/lab2/projects/"><span>Projects</span></a>
+      <a href="/lab2/events/"><span>Events</span></a>
+      <a href="/lab2/people/"><span>People</span></a>
+      <a href="/lab2/publications/"><span>Publications</span></a>
+      <a href="https://text-machine-lab.github.io/blog/" target="_blank"><span>Blog<img class="blog-icon" src="/lab2/img/icons/external-link.png"></span></a>
+      <a href="/lab2/contact/"><span>Contact</span></a>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+</body>
+  <div class="container personal">
+    
+    <div class="row">
+      <div class="profile-column col-xs-12 col-sm-3 col-md-4 col-lg-3">
+        <h1 class="name-col-1">Victoria Khaychuk</h1>
+        <img class="photo-personal" src=/lab2//img/people/vita.jpg>
+        <div class="contacts">
+          
+            <a href="mailto:victoria_khaychuk@student.uml.edu"><img class="share-icon" src="/lab2//img/icons/email.png"></a>
+          
+          
+          
+          
+        </div>
+
+        
+        
+      </div>
+      <div class="info-column col-xs-12 col-sm-9 col-md-8 col-lg-9">
+        <h1 class="name-col-2">Victoria Khaychuk</h1>
+        <p> <p>Hi! I am an intern at Text Machine Lab, University of Massachusetts Lowell. I am studying to become a data scientist.
+Beyond taking programming and statistics courses, my goal is to learn machine learning with Python.</p>
+ </p>
+        
+
+        
+        <div class="tab">
+          
+            <button class="tablinks" onclick="openTab(event, 'Skills')" id="defaultOpen">Skills</button>
+          
+          
+            
+          
+          
+        </div>
+
+        
+        <div id="Skills" class="tabcontent skills-content">
+            
+              
+                
+              
+            
+              
+                
+              
+            
+              
+                
+              
+            
+              
+                
+                  <div class="row">
+                    <div class="skill-name">
+                      <p>Languages</p>
+                    </div>
+                    <div class="skill-description">
+                      
+                      <span class="skill">English</span>
+                      
+                      <span class="skill">Ukranian</span>
+                      
+                      <span class="skill">Russian</span>
+                      
+                    </div>
+                  </div>
+                
+              
+            
+              
+                
+              
+            
+        </div>
+        
+
+        
+
+        
+        
+      </div>
+    </div>
+    </div>
+</body>
+<script>
+  function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+  }
+
+  
+  document.getElementById("defaultOpen").click();
+</script><!DOCTYPE html>
+  <footer class="site-footer">
+    <center><a href="https://www.uml.edu/" target="_blank">
+      <img src="/lab2//img/icons/uml.png" alt="UML" height="42" ></center></a>
+    <div class="container">
+      <p class="powered-by">
+        &copy Text Machine Lab. Powered by Hugo.
+      </p>
+    </div>
+  </footer>

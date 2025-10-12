@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/lab2/css/style.css" />
+  <link rel="shortcut icon" href="/lab2/img/icons/browser_icon.ico"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head><!DOCTYPE html>
+<head>
+  <script>
+  function toggleMenu() {
+      var x = document.getElementById("navmenu");
+      if (x.className === "menu-items") {
+          x.className += " responsive";
+      } else {
+          x.className = "menu-items";
+      }
+  }
+  </script>
+</head>
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container-fluid">
+    <a href="/lab2/">
+      <img src="/lab2//img/icons/text-machine-White-min.png" hspace="20" class='navbar-logo'>
+    </a>
+    <div class="menu-items" id="navmenu">
+      <div class="items-wrapper">
+      <a href="/lab2/"> <span>Home</span></a>
+      <a href="/lab2/projects/"><span>Projects</span></a>
+      <a href="/lab2/events/"><span>Events</span></a>
+      <a href="/lab2/people/"><span>People</span></a>
+      <a href="/lab2/publications/"><span>Publications</span></a>
+      <a href="https://text-machine-lab.github.io/blog/" target="_blank"><span>Blog<img class="blog-icon" src="/lab2/img/icons/external-link.png"></span></a>
+      <a href="/lab2/contact/"><span>Contact</span></a>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+<body>
+  <article>
+    <div class="article-container">
+      
+      <h3> Argument Mining </h3>
+      <div class="author-container">         
+			<p>In this project, we investigated several approaches to argument mining, including (a) using Pointer Networks to identify links between argument constituents, (b) studying memory networks and other methods for knowledge integration in service of argument mining, and (c) integrating external signal in order to predict winners in Oxford-style debates.
+			</p>
+      </div>
+      <div class="share-icons">
+      </div>
+      <div class="buttons">
+
+			<!--<button onclick="window.open('https:\/\/www.sciencedirect.com\/science\/article\/pii\/S1532046419300504','_blank');" type="button" >Paper</button>           
+            <button onclick="window.open('https:\/\/n2c2.dbmi.hms.harvard.edu\/track3','_blank');" type="button" >Dataset</button>        
+			-->
+	  </div>
+      <p></p>
+      <p></p>
+      
+      
+        <h3>Publications</h3>
+		
+	<div class="publication">
+      <img src="/lab2//img/icons/doc.png">
+      <span class="author-container-pub">
+        <span class="author pub">P. Potash</span>
+        <span class="author pub">A. Romanov</span>
+        <span class="author pub">A. Rumshisky</span>
+      </span>
+      <span>
+        Here&#39;s My Point: Joint Pointer Architecture for Argument Mining.
+      </span>
+      <span>
+        <em>Proceedings of EMNLP 2017.</em>
+      </span>
+      <span>
+        Copenhagen, Denmark.
+      </span>
+      <div class="citing">
+        <button onclick="window.open('http:\/\/aclweb.org\/anthology\/D17-1143.pdf','_blank');"
+          type="button">PDF</button>
+        <button type="button" data-toggle="collapse" data-target="#pub2_2017">BibTeX</button>
+        <div id="pub2_2017" class="collapse">
+            <pre><p>@inproceedings{potash2017here,
+				title={Here's My Point: Joint Pointer Architecture for Argument Mining},
+				author={Potash, Peter and Romanov, Alexey and Rumshisky, Anna},
+				booktitle={Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing},
+				pages={1364&ndash;1373},
+				year={2017}
+				}</p>
+			</pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication">
+      <img src="/lab2//img/icons/doc.png">
+      <span class="author-container-pub">
+        <span class="author pub">P. Potash</span>
+        <span class="author pub">R. Bhattacharya</span>
+        <span class="author pub">A. Rumshisky</span>
+      </span>
+      <span>
+        Length, Interchangeability, and External Knowledge: Observations from Predicting Argument Convincingness.
+      </span>
+      <span>
+        <em>Proceedings of IJCNLP 2017.</em>
+      </span>
+      <span>
+        Taipei, Taiwan.
+      </span>
+      <div class="citing">
+        <button onclick="window.open('http:\/\/aclweb.org\/anthology\/I17-1035.pdf','_blank');"
+          type="button">PDF</button>
+        <button type="button" data-toggle="collapse" data-target="#pub3_2017">BibTeX</button>
+        <div id="pub3_2017" class="collapse">
+           <pre><p>@inproceedings{potash_length_2017,
+				author = &ldquo;Potash, Peter and Bhattacharya, Robin and Rumshisky, Anna&rdquo;,
+				address = &ldquo;Taipei, Taiwan&rdquo;,
+				title = &ldquo;Length, {Interchangeability}, and {External} {Knowledge}: {Observations} from {Predicting} {Argument} {Convincingness}&quot;,
+				booktitle = &ldquo;Proceedings of the {Eighth} {International} {Joint} {Conference} on {Natural} {Language} {Processing} ({Volume} 1: {Long} {Papers})&quot;,
+				publisher = &ldquo;Asian Federation of Natural Language Processing&rdquo;,
+				year = &ldquo;2017&rdquo;,
+				pages = &ldquo;342&ndash;351&rdquo;
+				}</p>
+			</pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication">
+      <img src="/lab2//img/icons/doc.png">
+      <span class="author-container-pub">
+        <span class="author pub">P. Potash</span>
+        <span class="author pub">A. Rumshisky</span>
+      </span>
+      <span>
+        Towards Debate Automation: a Recurrent Model for Predicting Debate Winners.
+      </span>
+      <span>
+        <em>Proceedings of EMNLP 2017.</em>
+      </span>
+      <span>
+        Copenhagen, Denmark.
+      </span>
+      <div class="citing">
+        <button onclick="window.open('http:\/\/aclweb.org\/anthology\/D17-1261.pdf','_blank');"
+          type="button">PDF</button>
+        <button type="button" data-toggle="collapse" data-target="#pub1_2017">BibTeX</button>
+        <div id="pub1_2017" class="collapse">
+            <pre><p>@inproceedings{potash_towards_2017,
+					author = &ldquo;Potash, Peter and Rumshisky, Anna&rdquo;,
+					address = &ldquo;Copenhagen, Denmark&rdquo;,
+					title = &ldquo;Towards {Debate} {Automation}: a {Recurrent} {Model} for {Predicting} {Debate} {Winners}&quot;,
+					booktitle = &ldquo;Proceedings of the 2017 {Conference} on {Empirical} {Methods} in {Natural} {Language} {Processing}&quot;,
+					publisher = &ldquo;Association for Computational Linguistics&rdquo;,
+					year = &ldquo;2017&rdquo;,
+					pages = &ldquo;2465&ndash;2475&rdquo;
+					}</p>
+			</pre>
+        </div>
+      </div>
+    </div>
+
+  
+
+    </div>
+  </article>
+</body><!DOCTYPE html>
+  <footer class="site-footer">
+    <center><a href="https://www.uml.edu/" target="_blank">
+      <img src="/lab2//img/icons/uml.png" alt="UML" height="42" ></center></a>
+    <div class="container">
+      <p class="powered-by">
+        &copy Text Machine Lab. Powered by Hugo.
+      </p>
+    </div>
+  </footer>

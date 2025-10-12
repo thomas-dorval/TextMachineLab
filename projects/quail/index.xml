@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>QuAIL leaderboard</title>
+    <link>/lab2/projects/quail/</link>
+    <description>Recent content on QuAIL leaderboard</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/lab2/projects/quail/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LanguageGeneration on Text Machine Lab</title>
+    <link>/lab2/tags/languagegeneration/</link>
+    <description>Recent content in LanguageGeneration on Text Machine Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="/lab2/tags/languagegeneration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Evaluating Creative Language Generation: The Case of Rap Lyric Ghostwriting</title>
+      <link>/lab2/projects/ghostwriter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/projects/ghostwriter/</guid>
+      <description>Language generation tasks that seek to mimic human ability to use language creatively are difficult to evaluate, since one must consider creativity, style, and other non-trivial aspects of the generated text. The goal of this paper is to develop evaluations methods for one such task, ghostwriting of rap lyrics, and to provide an explicit, quantifiable foundation for the goals and future directions for this task.Ghostwriting must produce text that is similar in style to the emulated artist, yet distinct in content.</description>
+    </item>
+    
+    <item>
+      <title>MUTT: Metric Unit TesTing for Language Generation Tasks</title>
+      <link>/lab2/projects/mutt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/projects/mutt/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

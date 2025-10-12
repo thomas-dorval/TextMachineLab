@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<head>
+	<meta name="generator" content="Hugo 0.61.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  
+  <link rel="stylesheet" type="text/css" href="/lab2/projects/quail/css/style.css" />
+  <link rel="shortcut icon" href="/lab2/projects/quail/img/icons/browser_icon.ico"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head><!DOCTYPE html>
+<head>
+  <script>
+  function toggleMenu() {
+      var x = document.getElementById("navmenu");
+      if (x.className === "menu-items") {
+          x.className += " responsive";
+      } else {
+          x.className = "menu-items";
+      }
+  }
+  </script>
+</head>
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container-fluid">
+    <a href="http://text-machine.cs.uml.edu/lab2/">
+      <img src="/lab2/projects/quail//img/icons/text-machine-White-min.png" hspace="20" class='navbar-logo'>
+    </a>
+    <div class="menu-items" id="navmenu">
+      <div class="items-wrapper">
+      <a href="http://text-machine.cs.uml.edu/lab2/"> <span>Home</span></a>
+      <a href="http://text-machine.cs.uml.edu/lab2/projects/"><span>Projects</span></a>
+      <a href="http://text-machine.cs.uml.edu/lab2/events/"><span>Events</span></a>
+      <a href="http://text-machine.cs.uml.edu/lab2/people/"><span>People</span></a>
+      <a href="http://text-machine.cs.uml.edu/lab2/publications/"><span>Publications</span></a>
+      <a href="https://text-machine-lab.github.io/blog/" target="_blank"><span>Blog<img class="blog-icon" src="/lab2/projects/quail/img/icons/external-link.png"></span></a>
+      <a href="http://text-machine.cs.uml.edu/lab2/contact/"><span>Contact</span></a>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+ 
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    $(document).ready( function () {
+        $('#quail-leaderboard').DataTable({"dom": 'rt<"bottom"flp><"clear">'});
+    } );
+    </script>
+    
+    <script type="text/javascript">
+        (function($) {
+        var data = JSON.parse( null );
+    
+          
+        
+        
+        
+        
+        
+            
+        for (var i = 0; i < data.leaderboard.length; i++) {
+            var item = data.leaderboard[i];
+            item.rank = i + 1;
+            var submissionInfo = item.bundle.metadata.description;
+            var linkId;
+            if (submissionInfo.hasOwnProperty('predict_id')) {
+            linkId = submissionInfo.predict_id;
+            } else {
+            linkId = item.bundle.id;
+            }
+    
+            item.url = data.config.host + '/bundles/' + linkId + '/';
+            item.short_id = linkId.slice(0, 2+8);
+            item.created = moment.unix(item.submission.created).format('YYYY-MM-DD, h:mm:ss A');
+            switch (item.bundle.state) {
+            case 'ready':
+                item.status = 'success';
+                item.scores.accuracy = Number((item.scores.accuracy).toFixed(3));
+                item.context_class = "";
+                break;
+            case 'running':
+            case 'staged':
+            case 'created':
+                item.status = 'running';
+                item.context_class = "warning";
+                break;
+            default:
+                item.status = item.bundle.state;
+                item.context_class = "danger";
+                break;
+            }
+              
+              item.config = data.config;
+            }
+        
+            data.taglen = data.config.submission_tag.length + 1;
+            data.updated = moment.unix(data.updated).format('dddd MMMM Do, YYYY [at] h:mm:ss A') + ' PDT';
+            data.nav_class = {};
+            data.nav_class[data.config.metadata.key] = "active";
+        
+            
+            
+            
+            
+        
+        
+          
+        
+        
+        
+        
+        })(jQuery);
+    
+</script>
+<body>
+    <div class="quail-header"> 
+        <img src=/lab2/projects/quail//img/projects/quail-logo.png class="quail-image">
+        <h1>QuAIL - Question Answering for Artificial Intelligence</h1>
+    </div>
+    
+    <div class="container">
+        
+        <div class="row quail-row">
+            <div class="col-md-5 quail-description" >
+                <h2>What is QuAIL?</h2>
+                <p>A new kind of question-answering dataset that combines commonsense, text-based, and unanswerable questions, balanced for different genres and reasoning types. Reasoning type annotation for 9 types of reasoning: temporal, causality, factoid, coreference, character properties, their belief states, subsequent entity states, event durations, and unanswerable. Genres: CC license fiction, Voice of America news, blogs, user stories from Quora 800 texts, 18 questions for each (~14K questions).</p>
+            </div>
+    
+            <div class="col-md-5 quail-starter"> 
+                <h2>Getting started</h2>
+
+                <a href="https://worksheets.codalab.org/worksheets/0xcb1727289e2b4688b6534c8253b3bc8e" target="_blank"><button class="quail-button">Submission tutorial</button></a>
+                <a href="https://github.com/text-machine-lab/quail/" target="_blank"><button class="quail-button">Data</button></a>
+                <a href="https://text-machine-lab.github.io/blog/2020/quail/" target="_blank"><button class="quail-button">Blog</button></a>
+                <a href="https://aaai.org/ojs/index.php/AAAI/article/view/6398" target="_blank"><button class="quail-button">Paper</button></a>
+    
+                <h2>Questions?</h2>
+                <p> Contact <a href="mailto:matthew_downey@student.uml.edu>">Matt Downey</a> regarding the leaderboard, and <a href="anna_rogers@uml.edu">Anna Rogers</a> regarding QuAIL data.</p>
+    
+            </div>
+    
+        </div>   
+        <div class="row leaderboard">
+            <div class="col-md-12">
+                <h2>Leaderboard    <span>(Last updated: 30 Jun 21 10:34 EDT)</span></h2>
+                <table class="table hover" id="quail-leaderboard">
+                    <thead>
+                        <tr>
+                        <th>Rank</th>
+                        <th title="Overall accuracy">All</th>
+                        <th title="Temporal order">Temp.</th>
+                        <th title="Causality">Caus.</th>
+                        <th title="Factual">Fact.</th>
+                        <th title="Character identity">Char.</th>
+                        <th title="Entity properties">Ent.</th>
+                        <th title="Belief states">Belief</th>
+                        <th title="Subsequent state">Sub.</th>
+                        <th title="Event duration">Dur.</th>
+                        <th title="Unanswerable">Unans.</th>
+    
+                        <th>Team</th>
+                        <th>Submitted</th>
+                        <th>Model</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+    
+                        
+                            
+                            
+                            
+                            
+                            
+                        
+    
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+    
+                            <tr>
+                                <td>1</td>
+                                <td style="font-weight: bold;">53.4</td>
+                                <td>53.3</td>
+                                <td>61.2</td>
+                                <td>62.1</td>
+                                <td>42.9</td>
+                                <td>55.4</td>
+                                <td>58.8</td>
+                                <td>53.3</td>
+                                <td>62.9</td>
+                                <td>30.8</td>
+    
+                                <td>matt.downey18</td>
+                                <td>31 Oct 20 09:02 EDT</td>
+                                <td>TML BERT Baseline</td>
+                            </tr>
+                        
+                    
+    
+                        
+                            
+                            
+                            
+                            
+                            
+                        
+    
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+    
+                            <tr>
+                                <td>2</td>
+                                <td style="font-weight: bold;">31.1</td>
+                                <td>34.2</td>
+                                <td>29.2</td>
+                                <td>35.4</td>
+                                <td>33.3</td>
+                                <td>26.2</td>
+                                <td>25.8</td>
+                                <td>25.0</td>
+                                <td>25.8</td>
+                                <td>45.0</td>
+    
+                                <td>matt.downey18</td>
+                                <td>30 Oct 20 20:16 EDT</td>
+                                <td>TML PMI Baseline</td>
+                            </tr>
+                        
+                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+        <div class="row notes">
+            <div class="col-md-12">
+                <h2>Notes</h2>
+                <p>The leaderboard is live!</p>
+                <p>After submission, please allow a few hours for your results to show up in the leaderboard.</p>
+            </div>
+        </div>
+    </div>
+    
+    
+
+</body><!DOCTYPE html>
+  <footer class="site-footer">
+    <center><a href="https://www.uml.edu/" target="_blank">
+      <img src="/lab2/projects/quail//img/icons/uml.png" alt="UML" height="42" ></center></a>
+    <div class="container">
+      <p class="powered-by">
+        &copy Text Machine Lab. Powered by Hugo.
+      </p>
+    </div>
+  </footer>
