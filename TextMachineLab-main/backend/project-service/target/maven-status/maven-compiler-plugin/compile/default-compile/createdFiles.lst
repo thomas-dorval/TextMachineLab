@@ -1,0 +1,11 @@
+com\textmachinelab\project\entity\Category.class
+com\textmachinelab\project\ProjectServiceApplication.class
+com\textmachinelab\project\entity\Project.class
+com\textmachinelab\project\controller\ProjectController.class
+com\textmachinelab\project\service\ProjectService.class
+com\textmachinelab\project\entity\Tag.class
+com\textmachinelab\project\controller\FileUploadController.class
+com\textmachinelab\project\config\WebConfig.class
+com\textmachinelab\project\repository\CategoryRepository.class
+com\textmachinelab\project\repository\TagRepository.class
+com\textmachinelab\project\repository\ProjectRepository.class

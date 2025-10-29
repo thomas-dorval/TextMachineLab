@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Anna Rumshisky" >
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+    <style>
+    </style>
+
+    <title>NarrativeTime: Order and Timing of Events in Narrative Text</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dsa-lrec2014.css" rel="stylesheet">
+    <link href="toolbar.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">NarrativeTime: Order and Timing of Events in Narrative Text</a>
+
+        </div>
+	    	<ul class="nav navbar-nav navbar-right navbar-right">
+				<li><a href="index.html">Home</a></li>
+				<li class="active"><a href="index.html">About</a></li>
+				<!--<li><a href="data.html">Data</a></li>-->
+				<li><a href="contact.html">Contact</a></li>
+		 	</ul>
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <h3 class="bg-heading">Published studies:</h3>
+<ol>
+  <li>Y. Meng, A. Rumshisky, A. Romanov. <u><a href="http://www.cs.uml.edu/~arum/publications/Meng_Rumshisky_EMNLP2017_Temporal.pdf">Temporal Information Extraction for Question Answering Using Syntactic Dependencies in an LSTM-based Architecture</a></u> <i>Proceedings of EMNLP 2017.</i> Denmark, Copenhagen.<p>
+    We used a set of simple, uniform in architecture LSTM-based models to recover different kinds of temporal relations from text. Using the shortest dependency path between entities as input, the same architecture is implemented to extract intra-sentence, cross- sentence, and document creation time relations. A "double-checking" technique reverses entity pairs in classification, boosting the recall of positive cases and reducing misclassifications between opposite classes. An efficient pruning algorithm resolves conflicts globally. Evaluated on QA-TempEval (SemEval2015 Task 5), our proposed technique outperforms state-of-the-art methods by a large margin. We also conduct intrinsic evaluation and post state-of-the-art results on Timebank-Dense.</li>
+<p>
+  <li>Y. Meng, A. Rumshisky. <u><a href="http://www.cs.uml.edu/~arum/publications/Meng_Rumshisky_ACL2018.pdf">Context-Aware Neural Model for Temporal Information Extraction</a></u>. <i>Proceedings of ACL 2018.</i> Melbourne, Australia.<p>
+      We developed a context-aware neural network model for temporal information extraction. This model has a uniform architecture for event-event, event-timex and timex-timex pairs. A Global Context Layer (GCL), inspired by Neural Turing Machine (NTM), stores processed temporal relations in narrative order, and retrieves them for use when relevant entities come in. Relations are then classified in context. The GCL model has long-term memory and attention mechanisms to resolve irregular long-distance dependencies that regular RNNs such as LSTM cannot recognize. It does not require any new input features, while outperforming the existing models in literature. To our knowledge it is also the first model to use NTM-like architecture to process the information from global context in discourse-scale natural text processing. We are going to release the source code in the future.</li>
+<p>
+  <li>Y. Meng, A. Rumshisky. <u><a href="https://arxiv.org/pdf/1809.06491">Triad-based Neural Network for Coreference Resolution</a></u>. <i>Proceedings of COLING 2018.</i> Santa Fe, New Mexico.<p>
+      We proposed a triad-based neural network system that generates affinity scores between entity
+      mentions for coreference resolution. The system simultaneously accepts three mentions as input,
+      taking mutual dependency and logical constraints of all three mentions into account, and thus
+      makes more accurate predictions than the traditional pairwise approach. Depending on system
+      choices, the affinity scores can be further used in clustering or mention ranking. Our experiments
+      show that a standard hierarchical clustering using the scores produces state-of-art results with
+      gold mentions on the English portion of CoNLL 2012 Shared Task. The model does not rely on
+      many handcrafted features and is easy to train and use. The triads can also be easily extended
+      to polyads of higher orders. To our knowledge, this is the first neural network system to model
+      mutual dependency of more than two members at mention level.
+</ol>
+
+          <h3 class="bg-heading">Preprints:</h3>
+<ol>
+
+  <li>A. Rogers, A. Smelkov, A. Rumshisky. 2019. <u><a href="https://arxiv.org/pdf/1908.11443">NarrativeTime:
+	Dense High-Speed Temporal Annotation on a Timeline </a></u> <i>arXiv preprint arXiv:1908.11443.</i>
+    <p>
+      We developed NarrativeTime, a new timeline-based annotation scheme for temporal order of events in text, and a new densely annotated fiction corpus comparable to TimeBank-Dense. NarrativeTime is considerably faster than schemes based on event pairs such as TimeML, and it produces more temporal links between events than TimeBank-Dense, while maintaining comparable agreement on temporal links. This is achieved through new strategies for encoding vagueness in temporal relations and an annotation workflow that takes into account the annotators' chunking and commonsense reasoning strategies. NarrativeTime comes with new specialized web-based tools for annotation and adjudication.
+  </li>
+</ol>	  
+      <hr>
+
+      <footer>
+        <p>&copy; <a href="http://text-machine.cs.uml.edu/lab">Text Machine Lab</a> 2014</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

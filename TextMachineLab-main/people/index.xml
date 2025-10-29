@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Peoples on Text Machine Lab</title>
+    <link>/lab2/people/</link>
+    <description>Recent content in Peoples on Text Machine Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="/lab2/people/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/lab2/people/daviddonahue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/people/daviddonahue/</guid>
+      <description>Hi! I am an undergraduate Electrical Engineering/Computer Science double major at Text Machine Lab, University of Massachusetts Lowell. My current work focuses on using Generative Adversarial Network (GAN) models to plan and generate natural language. As a side project I have been creating models for dialogue generation.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/lab2/people/gregsmelkov/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/people/gregsmelkov/</guid>
+      <description>Hi, I&#39;m a sophomore studying Computer Science at UMass Lowell. I am currently interning at the Text Machine Laboratory.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/lab2/people/mattdowney/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/people/mattdowney/</guid>
+      <description>Greetings! this is the webpage of Matthew Downey. Currently I am a Mechanical Engineering student persuing minor in Computer Science, going into my sophmore year at Umass Lowell. Interning in the text Machine Lab, I assist the researchers with their projects. Along with this, I study ML and its use in NLP.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/lab2/people/patrickkyoyetera/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/people/patrickkyoyetera/</guid>
+      <description>Hello! I graduated from the University of Massachusetts Lowell with a Bachelor of Science in Computer Science with a focus on Data Science&amp;hellip;. &amp;laquo;&amp;raquo; lol</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/lab2/people/victoriakhaychuk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/people/victoriakhaychuk/</guid>
+      <description>Hi! I am an intern at Text Machine Lab, University of Massachusetts Lowell. I am studying to become a data scientist. Beyond taking programming and statistics courses, my goal is to learn machine learning with Python.</description>
+    </item>
+    
+    <item>
+      <title>BS, now at MIT EECS</title>
+      <link>/lab2/people/williamboag/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/people/williamboag/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BS, now at MITRE Corporation</title>
+      <link>/lab2/people/kevinwacome/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/people/kevinwacome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PhD student</title>
+      <link>/lab2/people/olgakovaleva/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/people/olgakovaleva/</guid>
+      <description>Hi! I am a PhD student at Text Machine Lab, University of Massachusetts Lowell. My background is in Applied Mathematics and I currently focus on representation learning problems in ML. My work also includes building NLP models for question answering and analyzing electronic health records.</description>
+    </item>
+    
+    <item>
+      <title>PhD student</title>
+      <link>/lab2/people/saurabhkulshreshtha/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/people/saurabhkulshreshtha/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PhD student</title>
+      <link>/lab2/people/vladlialin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/people/vladlialin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PhD, now at IBM Watson</title>
+      <link>/lab2/people/yen-fuluo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/people/yen-fuluo/</guid>
+      <description>My expertise includes Natural Language Processing, Machine Learning, and Data Visualization. My thesis: &amp;ldquo;Mining the Clinical Narrative: Mortality Prediction and Concept Normalization&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>PhD, now at Microsoft</title>
+      <link>/lab2/people/alexeyromanov/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/people/alexeyromanov/</guid>
+      <description>I am currently a fourth year Ph.D. student at UMass Lowell in the Text-Machine Lab working with Anna Rumshisky. My research interests at this moment are particularly focused on applying Deep Learning methods in Natural Language Processing.</description>
+    </item>
+    
+    <item>
+      <title>PhD, now at Microsoft Research</title>
+      <link>/lab2/people/peterpotash/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/people/peterpotash/</guid>
+      <description>I received a Masters in Mathematics and a PhD in Computer Science. My dissertation focused on deep learning strategies for argument mining. I currently work at MSR Maluuba.</description>
+    </item>
+    
+    <item>
+      <title>PhD, now at Nuance</title>
+      <link>/lab2/people/yuanliangmeng/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/people/yuanliangmeng/</guid>
+      <description>I am interested in many aspects of natural language processing, deep learning and AI. Currently I work on temporal relation information extraction and coreference resolution. I studied engineering in the past, and was a software engineer before joining the lab. Besides NLP, I also had some experience in speech sysnthesis and computer vision.</description>
+    </item>
+    
+    <item>
+      <title>PI</title>
+      <link>/lab2/people/annarumshisky/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/people/annarumshisky/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Postdoc</title>
+      <link>/lab2/people/annarogers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/lab2/people/annarogers/</guid>
+      <description>I am a post-doctoral associate at the Computer Science Department, University of Massachusetts (Lowell). I hold a Ph.D. degree from the Department of Language and Information Sciences at the University of Tokyo (Japan). My research spans the intersection of linguistics, natural language processing, and machine learning.
+This page lists my work with Text Machine lab, which I joined in 2017. See my full research profile here.</description>
+    </item>
+    
+  </channel>
+</rss>

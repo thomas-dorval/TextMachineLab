@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="shortcut icon" href="/img/icons/browser_icon.ico"/>
+</head><!DOCTYPE html>
+<head>
+  <script>
+  function toggleMenu() {
+      var x = document.getElementById("navmenu");
+      if (x.className === "menu-items") {
+          x.className += " responsive";
+      } else {
+          x.className = "menu-items";
+      }
+  }
+  </script>
+</head>
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container-fluid">
+    <a href="/">
+      <img src="/img/icons/text-machine-White-min.png" hspace="20" class='navbar-logo'>
+    </a>
+    <div class="menu-items" id="navmenu">
+      <div class="items-wrapper">
+      <a href="/"> <span>Home</span></a>
+      <a href="/projects/"><span>Projects</span></a>
+      <a href="/events/"><span>Events</span></a>
+      <a href="/people/"><span>People</span></a>
+      <a href="/publications/"><span>Publications</span></a>
+      <a href="https://text-machine-lab.github.io/blog/" target="_blank"><span>Blog<img class="blog-icon" src="/img/icons/external-link.png"></span></a>
+      <a href="/contact/"><span>Contact</span></a>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+<body>
+  <div class="container">
+    <h1>Contact</h1>
+    <div class="contacts-container">
+      <div class="contact-item email">
+        <img src="/lab2//img/icons/email.png">
+        <span>arum@cs.uml.edu</span>
+      </div>
+      <div class="contact-item uml">
+        <img src="/lab2//img/icons/study.png">
+        <span>For general information about UMass Lowell, visit <a href="https://uml.edu" target="_blank">www.uml.edu</a></span>
+      </div>
+      <div class="contact-item loc">
+        <img src="/lab2//img/icons/location.png">
+        <span>Dandeneau Hall, 1 University avenue, Lowell, MA, Office 415</span>
+      </div>
+      <div class="contact-item map-responsive">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.3556421435032!2d-71.3275307841599!3d42.65381837916836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3a45a88984367%3A0x625a67c37ce48310!2s1+University+Ave%2C+Lowell%2C+MA+01854!5e0!3m2!1sen!2sus!4v1535623313159"  frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+</body><!DOCTYPE html>
+  <footer class="site-footer">
+    <center><a href="https://www.uml.edu/" target="_blank">
+      <img src="/lab2//img/icons/uml.png" alt="UML" height="42" ></center></a>
+    <div class="container">
+      <p class="powered-by">
+        &copy Text Machine Lab. Powered by Hugo.
+      </p>
+    </div>
+  </footer>

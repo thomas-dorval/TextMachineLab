@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/admin.css" />
+  <link rel="shortcut icon" href="/img/icons/browser_icon.ico"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Manage Users - Text Machine Lab</title>
+</head>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container-fluid">
+    <a href="/"><img src="/img/icons/text-machine-White-min.png" hspace="20" class='navbar-logo'></a>
+    <div class="menu-items" id="navmenu">
+      <div class="items-wrapper">
+        <a href="/"><span>Home</span></a>
+        <a href="/projects/"><span>Projects</span></a>
+        <a href="/events/"><span>Events</span></a>
+        <a href="/people/"><span>People</span></a>
+        <a href="/publications/"><span>Publications</span></a>
+        <a href="https://text-machine-lab.github.io/blog/" target="_blank"><span>Blog<img class="blog-icon" src="/img/icons/external-link.png"></span></a>
+        <a href="/contact/"><span>Contact</span></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<body>
+  <div class="container dashboard-container">
+    <div class="dashboard-header">
+      <h1>Manage Users</h1>
+      <div class="user-info">
+        <a href="/admin/" class="btn btn-default"><i class="fa fa-arrow-left"></i> Back to Dashboard</a>
+      </div>
+    </div>
+    
+    <div id="messageArea"></div>
+    
+    <div class="admin-table-container">
+      <div class="admin-table-header">
+        <h2>Admin Users</h2>
+        <div class="admin-table-actions">
+          <input type="text" class="form-control" id="searchInput" placeholder="Search users..." style="width: 200px; display: inline-block;">
+          <a href="/admin/users/form.html" class="btn btn-primary"><i class="fa fa-plus"></i> Add Co-Admin</a>
+        </div>
+      </div>
+      
+      <div id="usersTableContainer">
+        <div class="text-center" style="padding: 40px;">
+          <i class="fa fa-spinner fa-spin fa-2x"></i>
+          <p>Loading users...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<footer class="site-footer">
+  <center><a href="https://www.uml.edu/" target="_blank"><img src="/img/icons/uml.png" alt="UML" height="42"></a></center>
+  <div class="container"><p class="powered-by">&copy Text Machine Lab. Powered by Hugo.</p></div>
+</footer>
+
+<script src="/js/auth.js"></script>
+<script src="/js/api.js"></script>
+<script src="/js/utils.js"></script>
+<script>
+let allUsers = [];
+let filteredUsers = [];
+
+document.addEventListener('DOMContentLoaded', function() {
+    Auth.requireAuth();
+    
+    // Check if user is ADMIN
+    const user = Auth.getUser();
+    if (!user || user.role !== 'ADMIN') {
+        window.location.href = '/admin/';
+        return;
+    }
+    
+    loadUsers();
+    document.getElementById('searchInput').addEventListener('input', Utils.debounce(handleSearch, 300));
+});
+
+async function loadUsers() {
+    const container = document.getElementById('usersTableContainer');
+    try {
+        Utils.showLoading(container);
+        const users = await API.users.getAll();
+        allUsers = users;
+        filteredUsers = users;
+        renderUsersTable();
+    } catch (error) {
+        Utils.showError(container, 'Failed to load users: ' + error.message);
+    }
+}
+
+function renderUsersTable() {
+    const container = document.getElementById('usersTableContainer');
+    
+    if (filteredUsers.length === 0) {
+        container.innerHTML = `
+            <div class="text-center" style="padding: 40px;">
+                <i class="fa fa-users fa-3x text-muted"></i>
+                <h3>No users found</h3>
+                <a href="/admin/users/form.html" class="btn btn-primary"><i class="fa fa-plus"></i> Add Co-Admin</a>
+            </div>`;
+        return;
+    }
+    
+    let tableHtml = `<table class="table admin-table"><thead><tr><th>Username</th><th>Email</th><th>Role</th><th>Status</th><th>Created</th><th>Actions</th></tr></thead><tbody>`;
+    
+    filteredUsers.forEach(user => {
+        const statusBadge = user.active ? 
+            '<span class="badge-status published">Active</span>' : 
+            '<span class="badge-status archived">Inactive</span>';
+        
+        const roleBadge = user.role === 'ADMIN' ? 
+            '<span class="badge-status published">Admin</span>' : 
+            '<span class="badge-status draft">Co-Admin</span>';
+        
+        const actions = user.role === 'ADMIN' ? 
+            '<span class="text-muted">System Admin</span>' :
+            `<button class="btn btn-sm btn-warning" onclick="toggleUserStatus(${user.id}, ${user.active})">
+                <i class="fa fa-${user.active ? 'ban' : 'check'}"></i> ${user.active ? 'Deactivate' : 'Activate'}
+            </button>`;
+        
+        tableHtml += `
+            <tr>
+                <td><strong>${Utils.sanitizeHtml(user.username)}</strong></td>
+                <td>${Utils.sanitizeHtml(user.email)}</td>
+                <td>${roleBadge}</td>
+                <td>${statusBadge}</td>
+                <td>${Utils.formatDate(user.createdAt)}</td>
+                <td class="actions">${actions}</td>
+            </tr>`;
+    });
+    
+    container.innerHTML = tableHtml + '</tbody></table>';
+}
+
+function handleSearch() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    filteredUsers = searchTerm ? 
+        allUsers.filter(user => 
+            (user.username && user.username.toLowerCase().includes(searchTerm)) ||
+            (user.email && user.email.toLowerCase().includes(searchTerm))
+        ) : allUsers;
+    renderUsersTable();
+}
+
+async function toggleUserStatus(userId, currentStatus) {
+    const action = currentStatus ? 'deactivate' : 'activate';
+    if (!Utils.confirm(`Are you sure you want to ${action} this user?`)) return;
+    
+    try {
+        if (currentStatus) {
+            await API.users.deactivate(userId);
+        } else {
+            await API.users.activate(userId);
+        }
+        
+        Utils.showSuccess(document.getElementById('messageArea'), `User ${action}d successfully`);
+        
+        // Update local data
+        const userIndex = allUsers.findIndex(u => u.id === userId);
+        if (userIndex !== -1) {
+            allUsers[userIndex].active = !currentStatus;
+        }
+        const filteredIndex = filteredUsers.findIndex(u => u.id === userId);
+        if (filteredIndex !== -1) {
+            filteredUsers[filteredIndex].active = !currentStatus;
+        }
+        
+        renderUsersTable();
+        setTimeout(() => Utils.clearMessage(document.getElementById('messageArea')), 3000);
+    } catch (error) {
+        Utils.showError(document.getElementById('messageArea'), `Failed to ${action} user: ` + error.message);
+    }
+}
+</script>

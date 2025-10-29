@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/lab2/css/style.css" />
+  <link rel="shortcut icon" href="/lab2/img/icons/browser_icon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+</head>
+<!DOCTYPE html>
+
+<head>
+  <script>
+    function toggleMenu() {
+      var x = document.getElementById("navmenu");
+      if (x.className === "menu-items") {
+        x.className += " responsive";
+      } else {
+        x.className = "menu-items";
+      }
+    }
+  </script>
+</head>
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container-fluid">
+    <a href="/lab2/">
+      <img src="/lab2//img/icons/text-machine-White-min.png" hspace="20" class='navbar-logo'>
+    </a>
+    <div class="menu-items" id="navmenu">
+      <div class="items-wrapper">
+        <a href="/lab2/"> <span>Home</span></a>
+        <a href="/lab2/projects/"><span>Projects</span></a>
+        <a href="/lab2/events/"><span>Events</span></a>
+        <a href="/lab2/people/"><span>People</span></a>
+        <a href="/lab2/publications/"><span>Publications</span></a>
+        <a href="https://text-machine-lab.github.io/blog/" target="_blank"><span>Blog<img class="blog-icon"
+              src="/lab2/img/icons/external-link.png"></span></a>
+        <a href="/lab2/contact/"><span>Contact</span></a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+</body>
+<div class="container personal">
+  <div class="row">
+    <div class="profile-column col-xs-12 col-sm-3 col-md-4 col-lg-3">
+      <h1 class="name-col-1">Olga Kovaleva</h1>
+      <img class="photo-personal" src=/lab2//img/people/olga.jpg>
+      <div class="contacts">
+        <a href="mailto:olga_kovaleva@student.uml.edu"><img class="share-icon" src="/lab2//img/icons/email.png"></a>
+        <a href="https://github.com/guacamolia" target="_blank"><img class="share-icon"
+            src="/lab2//img/icons/github.png"></a>
+        <a href="https://www.linkedin.com/in/olga-kovaleva-88a351171/" target="_blank"><img class="share-icon"
+            src="/lab2//img/icons/linkedin.png"></a>
+        <a href="https://scholar.google.com/citations?user=X1vRDLsAAAAJ&hl=en" target="_blank"><img class="share-icon" src="/lab2//img/icons/scholar.png"></a>
+      </div>
+    </div>
+    <div class="info-column col-xs-12 col-sm-9 col-md-8 col-lg-9">
+      <h1 class="name-col-2">Olga Kovaleva</h1>
+      <p>Hi! I am a PhD student at Text Machine Lab, University of Massachusetts Lowell. My background is in Applied
+        Mathematics and I currently focus on representation learning problems in ML. My work also includes building NLP
+        models for question answering and analyzing electronic health records.</p>
+      <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Publications')" id="defaultOpen">Publications</button>
+        <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
+      </div>
+
+      <div id="Publications" class="tabcontent">
+        <div class="publication">
+          <img src="/lab2//img/icons/doc.png">
+          <span class="author-container-pub">
+            <span class="author pub">A. Rogers</span>
+            <span class="author pub">O.Kovaleva</span>
+            <span class="author pub">A.Rumshisky</span>
+          </span>
+          <span>
+            A Primer in BERTology: What We Know about How BERT Works.
+          </span>
+          <span>
+            <em>Accepted to TACL 2020.</em>
+          </span>
+          <div class="citing">
+            <button onclick="window.open('https:\/\/arxiv.org\/pdf\/2002.12327.pdf','_blank');" type="button">PDF</button>
+            <button type="button" data-toggle="collapse" data-target="#pub2_2020">BibTeX</button>
+            <div id="pub2_2020" class="collapse">
+              <pre><p>@article{rogers2020primer,
+    title={A primer in bertology: What we know about how bert works},
+    author={Rogers, Anna and Kovaleva, Olga and Rumshisky, Anna},
+    journal={arXiv preprint arXiv:2002.12327},
+    year={2020}
+    }</p></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="publication">
+          <img src="/lab2//img/icons/doc.png">
+          <span class="author-container-pub">
+            <span class="author pub">A. Rogers</span>
+            <span class="author pub">O. Kovaleva</span>
+            <span class="author pub">M. Downey</span>
+            <span class="author pub">A. Rumshisky</span>
+          </span>
+          <span>
+            Getting Closer to AI-complete Question Answering: A Set of Prerequisite Real Tasks.
+          </span>
+          <span>
+            <em>Proceedings of AAAI 2020.</em>
+          </span>
+          <div class="citing">
+            <button onclick="window.open('https:\/\/aaai.org\/ojs\/index.php\/AAAI\/article\/view\/6398','_blank');"
+              type="button">PDF</button>
+            <button type="button" data-toggle="collapse" data-target="#pub1_2020">BibTeX</button>
+            <div id="pub1_2020" class="collapse">
+              <pre><p>@inproceedings{rogers2020getting,
+  title={Getting Closer to AI Complete Question Answering: A Set of Prerequisite Real Tasks},
+  author={Rogers, A and Kovaleva, O and Downey, M and Rumshisky, A},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2020}
+  }</p></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="publication">
+          <img src="/lab2//img/icons/doc.png">
+          <span class="author-container-pub">
+            <span class="author pub">R. Perlis</span>
+            <span class="author pub">W. Boag</span>
+            <span class="author pub">O. Kovaleva</span>
+            <span class="author pub">T. McCoy</span>
+            <span class="author pub">A. Rumshisky</span>
+            <span class="author pub">P. Szolovits</span>
+          </span>
+          <span>
+            Hard for Humans, Hard for Machines: Predicting Readmission after Psychiatric Hospitalization Using Narrative
+            Notes.
+          </span>
+          <span>
+            <em>Translational Psychiatry.</em>
+          </span>
+          <div class="citing">
+          </div>
+        </div>
+
+        <div class="publication">
+          <img src="/lab2//img/icons/doc.png">
+          <span class="author-container-pub">
+            <span class="author pub">O. Kovaleva</span>
+            <span class="author pub">C. Shivade</span>
+            <span class="author pub">S. Kashyap</span>
+            <span class="author pub">K. Kanjaria</span>
+            <span class="author pub">A. Coy</span>
+            <span class="author pub">D. Ballah</span>
+            <span class="author pub">J. Wu</span>
+            <span class="author pub">Y. Guo</span>
+            <span class="author pub">A. Karargyris</span>
+            <span class="author pub">D. Beymer</span>
+            <span class="author pub">A. Rumshisky</span>
+            <span class="author pub">V. Mukherjee</span>
+          </span>
+          <span>
+            Towards Visual Dialog for Radiology.
+          </span>
+          <span>
+            <em>BioNLP, ACL 2020.</em>
+          </span>
+          <div class="citing">
+          </div>
+        </div>
+
+        <div class="publication">
+          <img src="/lab2//img/icons/doc.png">
+          <span class="author-container-pub">
+            <span class="author pub">O. Kovaleva</span>
+            <span class="author pub">A. Romanov</span>
+            <span class="author pub">A. Rogers</span>
+            <span class="author pub">A. Rumshisky</span>
+          </span>
+          <span>
+            Revealing the Dark Secrets of BERT.
+          </span>
+          <span>
+            <em>Proceedings of EMNLP 2019.</em>
+          </span>
+          <div class="citing">
+            <button onclick="window.open('https:\/\/arxiv.org\/pdf\/1908.08593.pdf','_blank');"
+              type="button">PDF</button>
+            <button type="button" data-toggle="collapse" data-target="#pub4_2019">BibTeX</button>
+            <div id="pub4_2019" class="collapse">
+              <pre><p>@inproceedings{kovaleva2019revealing,
+        title={Revealing the Dark Secrets of BERT},
+        author={Kovaleva, Olga and Romanov, Alexey and Rogers, Anna and Rumshisky, Anna},
+        booktitle={Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)},
+        pages={4356&ndash;4365},
+        year={2019}
+        }</p></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="publication">
+          <img src="/lab2//img/icons/doc.png">
+          <span class="author-container-pub">
+            <span class="author pub">O. Kovaleva</span>
+            <span class="author pub">A. Romanov</span>
+            <span class="author pub">A. Rumshisky</span>
+          </span>
+          <span>
+            Similarity-Based Reconstruction Loss for Meaning Representation. (short paper).
+          </span>
+          <span>
+            <em>Proceedings of EMNLP 2018.</em>
+          </span>
+          <div class="citing">
+            <button onclick="window.open('https:\/\/www.aclweb.org\/anthology\/D18-1525.pdf','_blank');"
+              type="button">PDF</button>
+            <button type="button" data-toggle="collapse" data-target="#pub5_2018">BibTeX</button>
+            <div id="pub5_2018" class="collapse">
+              <pre><p>@inproceedings{kovaleva2018similarity,
+        title={Similarity-Based Reconstruction Loss for Meaning Representation},
+        author={Kovaleva, Olga and Rumshisky, Anna and Romanov, Alexey},
+        booktitle={Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing},
+        pages={4875&ndash;4880},
+        year={2018}
+        }</p></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Projects" class="tabcontent">
+        <ul>
+          <li>
+            <h4 class="project-name"><a href="http://text-machine.cs.uml.edu/lab2/projects/quail/" target="_blank">QuAIL - Question Answering for Artificial Intelligence</a></h4>
+            <p>A new kind of question-answering dataset that combines commonsense, text-based, and unanswerable questions, balanced for different genres and reasoning types. 
+              Reasoning type annotation for 9 types of reasoning: temporal, causality, factoid, coreference, character properties, their belief states, subsequent entity states, event durations, and unanswerable. 
+              Genres: CC license fiction, Voice of America news, blogs, user stories from Quora 800 texts, 18 questions for each (~14K questions).</p>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <h4 class="project-name"><a href="https://text-machine-lab.github.io/blog/2020/bert-secrets/" target="_blank">The Dark Secrets of BERT</a></h4>
+            <p>In this project, we study self-attention patterns and the relative impact of fine-tuning and pre-training in BERT, the popular Transformer-based model that uses pre-training to learn contextualized representations.</p>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+<script>
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+
+  document.getElementById("defaultOpen").click();
+</script>
+<!DOCTYPE html>
+<footer class="site-footer">
+  <center><a href="https://www.uml.edu/" target="_blank">
+      <img src="/lab2//img/icons/uml.png" alt="UML" height="42"></center></a>
+  <div class="container">
+    <p class="powered-by">
+      &copy Text Machine Lab. Powered by Hugo.
+    </p>
+  </div>
+</footer>

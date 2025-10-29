@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/admin.css" />
+  <link rel="shortcut icon" href="/img/icons/browser_icon.ico"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Add Co-Admin - Text Machine Lab</title>
+</head>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container-fluid">
+    <a href="/"><img src="/img/icons/text-machine-White-min.png" hspace="20" class='navbar-logo'></a>
+    <div class="menu-items" id="navmenu">
+      <div class="items-wrapper">
+        <a href="/"><span>Home</span></a>
+        <a href="/projects/"><span>Projects</span></a>
+        <a href="/events/"><span>Events</span></a>
+        <a href="/people/"><span>People</span></a>
+        <a href="/publications/"><span>Publications</span></a>
+        <a href="https://text-machine-lab.github.io/blog/" target="_blank"><span>Blog<img class="blog-icon" src="/img/icons/external-link.png"></span></a>
+        <a href="/contact/"><span>Contact</span></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<body>
+  <div class="container dashboard-container">
+    <div class="admin-form-container">
+      <div class="admin-form-header">
+        <h2>Add Co-Admin User</h2>
+        <a href="/admin/users/" class="btn btn-default"><i class="fa fa-arrow-left"></i> Back to Users</a>
+      </div>
+      
+      <div id="messageArea"></div>
+      
+      <form id="userForm" class="admin-form">
+        <div class="form-group">
+          <label for="username">Username *</label>
+          <input type="text" class="form-control" id="username" name="username" required 
+                 placeholder="Enter username" data-label="Username"
+                 minlength="3" maxlength="50">
+          <small class="text-muted">Username must be between 3 and 50 characters</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" class="form-control" id="email" name="email" required 
+                 placeholder="Enter email address" data-label="Email">
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password *</label>
+          <input type="password" class="form-control" id="password" name="password" required 
+                 placeholder="Enter password (min. 8 characters)" data-label="Password"
+                 minlength="8">
+          <small class="text-muted">Password must be at least 8 characters long</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password *</label>
+          <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required 
+                 placeholder="Confirm password" data-label="Confirm Password">
+        </div>
+        
+        <div class="form-group">
+          <label for="role">Role *</label>
+          <select class="form-control" id="role" name="role" required data-label="Role">
+            <option value="">Select role</option>
+            <option value="CO_ADMIN">Co-Admin</option>
+            <option value="ADMIN">Admin</option>
+          </select>
+          <small class="text-muted">Co-Admin can manage content, Admin can manage users</small>
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="btn btn-default" onclick="window.location.href='/admin/users/'">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="submitBtn">
+            <span id="submitBtnText">Create User</span>
+            <i id="submitSpinner" class="fa fa-spinner fa-spin" style="display: none;"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+<footer class="site-footer">
+  <center><a href="https://www.uml.edu/" target="_blank"><img src="/img/icons/uml.png" alt="UML" height="42"></a></center>
+  <div class="container"><p class="powered-by">&copy Text Machine Lab. Powered by Hugo.</p></div>
+</footer>
+
+<script src="/js/auth.js"></script>
+<script src="/js/api.js"></script>
+<script src="/js/utils.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    Auth.requireAuth();
+    
+    // Check if user is ADMIN
+    const user = Auth.getUser();
+    if (!user || user.role !== 'ADMIN') {
+        window.location.href = '/admin/';
+        return;
+    }
+    
+    document.getElementById('userForm').addEventListener('submit', handleFormSubmit);
+});
+
+async function handleFormSubmit(e) {
+    e.preventDefault();
+    
+    const messageArea = document.getElementById('messageArea');
+    const submitBtn = document.getElementById('submitBtn');
+    const submitBtnText = document.getElementById('submitBtnText');
+    const submitSpinner = document.getElementById('submitSpinner');
+    
+    Utils.clearMessage(messageArea);
+    
+    const validation = Utils.validateForm(e.target);
+    if (!validation.isValid) {
+        Utils.showError(messageArea, validation.errors.join('<br>'));
+        return;
+    }
+    
+    const formData = Utils.formToObject(e.target);
+    
+    // Check password confirmation
+    if (formData.password !== formData.confirmPassword) {
+        Utils.showError(messageArea, 'Passwords do not match');
+        return;
+    }
+    
+    // Remove confirmPassword from data
+    delete formData.confirmPassword;
+    
+    submitBtn.disabled = true;
+    submitBtnText.style.display = 'none';
+    submitSpinner.style.display = 'inline';
+    
+    try {
+        await API.users.create(formData);
+        Utils.showSuccess(messageArea, 'User created successfully!');
+        
+        setTimeout(() => window.location.href = '/admin/users/', 1500);
+        
+    } catch (error) {
+        Utils.showError(messageArea, 'Failed to create user: ' + error.message);
+        submitBtn.disabled = false;
+        submitBtnText.style.display = 'inline';
+        submitSpinner.style.display = 'none';
+    }
+}
+</script>
