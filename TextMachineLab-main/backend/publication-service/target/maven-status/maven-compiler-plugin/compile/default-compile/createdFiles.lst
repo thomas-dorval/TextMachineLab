@@ -1,5 +1,0 @@
-com\textmachinelab\publication\controller\PublicationController.class
-com\textmachinelab\publication\PublicationServiceApplication.class
-com\textmachinelab\publication\entity\Publication.class
-com\textmachinelab\publication\repository\PublicationRepository.class
-com\textmachinelab\publication\service\PublicationService.class
