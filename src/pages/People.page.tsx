@@ -1,11 +1,11 @@
 import React from "react";
 
-function Home(): React.ReactElement {
+function People(): React.ReactElement {
   return (
     <div className="container">
-      
+      <h1>People</h1>
     </div>
   );
 }
 
-export default Home;
+export default People;

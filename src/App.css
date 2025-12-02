@@ -1,7 +1,7 @@
 /* Navbar styling for `Navbar.component.tsx` */
 :root {
 	--navbar-height: 64px;
-	--navbar-bg: #c62828; /* red */
+	--navbar-bg: maroon; /* red */
 	--navbar-foreground: #ffffff;
 	--footer-height: 64px;
 	--footer-foreground: #6b7280; /* neutral gray */
@@ -55,7 +55,17 @@ body {
 
 .site-content {
 	flex: 1 1 auto;
-  width: 100%;
+	width: 100%;
+	color: black;
+	margin: 1%;
+}
+
+.container {
+	flex: 1 1 auto;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 1rem;
 }
 
 /* Horizontal fixed navbar */
@@ -116,17 +126,68 @@ body {
 	margin: 0;
 	padding: 0;
 	margin-left: auto; /* push links to the right */
+	align-items: center;
+	height: var(--navbar-height);
 }
 
 .navbar__item {
 	display: inline-flex;
 	align-items: center;
+	height: var(--navbar-height);
 }
+
+.nav-dropdown {
+	list-style: none;
+	position: relative;
+}
+
+.nav-dropdown__parent {
+	display: inline-flex;
+	align-items: center;
+	height: var(--navbar-height);
+	padding: 0 0.75rem;
+	color: var(--navbar-foreground);
+	text-decoration: none;
+}
+
+.nav-dropdown__menu {
+	position: absolute;
+	right: 0;
+	top: 100%; /* directly below the navbar button (no gap) */
+	background: rgba(20,20,20,0.98);
+	border-radius: 8px;
+	padding: 0.5rem;
+	min-width: 180px;
+	display: none;
+	flex-direction: column;
+	gap: 0.25rem;
+	box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+	z-index: 10000;
+}
+
+.nav-dropdown__menu .nav-link {
+	display: flex;
+	height: auto;
+	padding: 0.5rem 0.75rem;
+	width: 100%;
+	justify-content: flex-start;
+}
+
+.nav-dropdown:hover .nav-dropdown__menu,
+.nav-dropdown:focus-within .nav-dropdown__menu,
+.nav-dropdown.open .nav-dropdown__menu { display: flex; }
+
+/* when the body has .nav-suppress-hover set (temporary during navigation), disable hover open states */
+body.nav-suppress-hover .nav-dropdown:hover .nav-dropdown__menu,
+body.nav-suppress-hover .nav-dropdown:focus-within .nav-dropdown__menu { display: none !important; }
 
 .nav-link {
 	color: var(--navbar-foreground);
 	text-decoration: none;
-	padding: 0.5rem 0.75rem;
+	display: inline-flex;
+	align-items: center;
+	height: var(--navbar-height);
+	padding: 0 0.75rem;
 	border-radius: 6px;
 	font-weight: 600;
 }

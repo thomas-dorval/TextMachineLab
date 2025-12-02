@@ -1,13 +1,21 @@
 import { NavLink } from "react-router-dom";
+import NavDropdown from "./NavDropdown.component";
 import logo from "../assets/text-machine-White-min.png";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "Projects", href: "/projects" },
   { label: "Events", href: "/events" },
   { label: "People", href: "/people" },
   { label: "Publications", href: "/publications" },
   { label: "Contact", href: "/contact" },
+];
+
+const projectSubItems = [
+  { label: "QuAIL", href: "/projects/quail" },
+  { label: "RuSentiment", href: "/projects/rusentiment" },
+  { label: "Medical Concept Normalization", href: "/projects/conceptnorm" },
+  { label: "TwitterHawk", href: "/projects/twitterhawk" },
+  { label: "External Pages", href: "/projects" },
 ];
 
 function Navbar() {
@@ -28,6 +36,7 @@ function Navbar() {
             </NavLink>
           </li>
         ))}
+        <NavDropdown label="Projects" parentHref="/projects" items={projectSubItems} />
       </ul>
     </nav>
   );

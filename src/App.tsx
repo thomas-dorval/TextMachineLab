@@ -2,13 +2,18 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import './App.css'
 
 import Navbar from "./components/Navbar.component";
-import Footer from "./components/Footer.components";
-import Home from "./pages/Home";
-import Contact from "./pages/Contact";
-import Events from "./pages/Events";
-import People from "./pages/People";
-import Projects from "./pages/Projects";
-import Publications from "./pages/Publications";
+import Footer from "./components/Footer.component";
+import Home from "./pages/Home.page";
+import Contact from "./pages/Contact.page";
+import Events from "./pages/Events.page";
+import People from "./pages/People.page";
+import Projects from "./pages/Projects.page";
+import ConceptNorm from "./pages/projects/ConceptNorm.page";
+import QuAIL from "./pages/projects/QuAIL.page";
+import RuSentiment from "./pages/projects/RuSentiment.page";
+import TwitterHawk from "./pages/projects/TwitterHawk.page";
+import Publications from "./pages/Publications.page";
+
 
 function App() {
   return (
@@ -21,6 +26,10 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/people" element={<People />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/conceptnorm" element={<ConceptNorm />} />
+        <Route path="/projects/quail" element={<QuAIL />} />
+        <Route path="/projects/rusentiment" element={<RuSentiment />} />
+        <Route path="/projects/twitterhawk" element={<TwitterHawk />} />
         <Route path="/publications" element={<Publications />} />
         <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

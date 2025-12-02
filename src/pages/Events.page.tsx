@@ -1,10 +1,11 @@
 import React from "react";
 
-function Contact(): React.ReactElement {
+function Events(): React.ReactElement {
   return (
     <div className="container">
+      <h1>Events</h1>
     </div>
   );
 }
 
-export default Contact;
+export default Events;

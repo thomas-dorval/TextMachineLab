@@ -1,10 +1,11 @@
 import React from "react";
 
-function Events(): React.ReactElement {
+function QuAIL(): React.ReactElement {
   return (
     <div className="container">
+        <h1>QuAIL</h1>
     </div>
   );
 }
 
-export default Events;
+export default QuAIL;
