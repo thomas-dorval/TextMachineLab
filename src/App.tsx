@@ -2,6 +2,7 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import './App.css'
 
 import Navbar from "./components/Navbar.component";
+import Footer from "./components/Footer.components";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Events from "./pages/Events";
@@ -13,7 +14,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Routes>
+      <main className="site-content">
+        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/events" element={<Events />} />
@@ -21,7 +23,9 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/publications" element={<Publications />} />
         <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+        </Routes>
+      </main>
+      <Footer />
     </div>
   );
 }

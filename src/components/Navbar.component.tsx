@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import logo from "../assets/text-machine-White-min.png";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -12,7 +13,9 @@ const navItems = [
 function Navbar() {
   return (
     <nav className="navbar" role="navigation" aria-label="Main Navigation">
-      <h2 className="navbar__title">TextMachineLab</h2>
+      <NavLink to="/" className="navbar__brand" aria-label="Go to TextMachineLab home">
+        <img src={logo} className="navbar__logo" alt="TextMachineLab logo" />
+      </NavLink>
       <ul className="navbar__list">
         {navItems.map((item) => (
           <li key={item.href} className="navbar__item">
