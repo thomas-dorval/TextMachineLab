@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/admin.css" />
+  <link rel="shortcut icon" href="/img/icons/browser_icon.ico"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Login - Text Machine Lab</title>
+</head>
+
+<head>
+  <script>
+  function toggleMenu() {
+      var x = document.getElementById("navmenu");
+      if (x.className === "menu-items") {
+          x.className += " responsive";
+      } else {
+          x.className = "menu-items";
+      }
+  }
+  </script>
+</head>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container-fluid">
+    <a href="/">
+      <img src="/img/icons/text-machine-White-min.png" hspace="20" class='navbar-logo'>
+    </a>
+    <div class="menu-items" id="navmenu">
+      <div class="items-wrapper">
+      <a href="/"> <span>Home</span></a>
+      <a href="/projects/"><span>Projects</span></a>
+      <a href="/events/"><span>Events</span></a>
+      <a href="/people/"><span>People</span></a>
+      <a href="/publications/"><span>Publications</span></a>
+      <a href="https://text-machine-lab.github.io/blog/" target="_blank"><span>Blog<img class="blog-icon" src="/img/icons/external-link.png"></span></a>
+      <a href="/contact/"><span>Contact</span></a>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<body>
+  <div class="container">
+    <div class="auth-container">
+      <div class="text-center">
+        <h2>Admin Login</h2>
+        <p class="text-muted">Sign in with your username to access the content management system</p>
+      </div>
+      
+      <div id="messageArea"></div>
+      
+      <form id="loginForm" class="auth-form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" name="username" required 
+                 placeholder="Enter your username" data-label="Username">
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="password" required 
+                 placeholder="Enter your password" data-label="Password">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" id="loginBtn">
+          <span id="loginBtnText">Sign In</span>
+          <i id="loginSpinner" class="fa fa-spinner fa-spin" style="display: none;"></i>
+        </button>
+      </form>
+      
+      <div class="auth-links">
+        <p>Don't have an account? <a href="/register/">Register here</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+
+<footer class="site-footer">
+  <center><a href="https://www.uml.edu/" target="_blank">
+    <img src="/img/icons/uml.png" alt="UML" height="42"></center></a>
+  <div class="container">
+    <p class="powered-by">
+      &copy Text Machine Lab. Powered by Hugo.
+    </p>
+  </div>
+</footer>
+
+<script src="/js/auth.js"></script>
+<script src="/js/utils.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Redirect if already authenticated
+    if (Auth.isAuthenticated()) {
+        window.location.href = '/admin/';
+        return;
+    }
+    
+    const loginForm = document.getElementById('loginForm');
+    const messageArea = document.getElementById('messageArea');
+    const loginBtn = document.getElementById('loginBtn');
+    const loginBtnText = document.getElementById('loginBtnText');
+    const loginSpinner = document.getElementById('loginSpinner');
+    
+    loginForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Clear previous messages
+        Utils.clearMessage(messageArea);
+        
+        // Validate form
+        const validation = Utils.validateForm(loginForm);
+        if (!validation.isValid) {
+            Utils.showError(messageArea, validation.errors.join('<br>'));
+            return;
+        }
+        
+        // Get form data
+        const formData = Utils.formToObject(loginForm);
+        
+        // Show loading state
+        loginBtn.disabled = true;
+        loginBtnText.style.display = 'none';
+        loginSpinner.style.display = 'inline';
+        
+        try {
+            // Attempt login
+            await Auth.login(formData.username, formData.password);
+            
+            // Show success message
+            Utils.showSuccess(messageArea, 'Login successful! Redirecting...');
+            
+            // Redirect to dashboard
+            setTimeout(() => {
+                window.location.href = '/admin/';
+            }, 1000);
+            
+        } catch (error) {
+            // Show error message
+            Utils.showError(messageArea, error.message || 'Login failed. Please try again.');
+            
+            // Reset button state
+            loginBtn.disabled = false;
+            loginBtnText.style.display = 'inline';
+            loginSpinner.style.display = 'none';
+        }
+    });
+});
+</script>

@@ -1,0 +1,12 @@
+com\textmachinelab\user\controller\UserController.class
+com\textmachinelab\user\service\JwtService.class
+com\textmachinelab\user\dto\LoginRequest.class
+com\textmachinelab\user\dto\AuthResponse.class
+com\textmachinelab\user\config\SecurityConfig.class
+com\textmachinelab\user\entity\User.class
+com\textmachinelab\user\dto\UserRegistrationRequest.class
+com\textmachinelab\user\UserServiceApplication.class
+com\textmachinelab\user\repository\UserRepository.class
+com\textmachinelab\user\controller\TestController.class
+com\textmachinelab\user\entity\Role.class
+com\textmachinelab\user\service\UserService.class

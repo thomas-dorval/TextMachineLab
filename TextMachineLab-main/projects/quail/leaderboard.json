@@ -1,0 +1,150 @@
+{
+    "config": {
+        "allow_multiple_models": false,
+        "allow_orphans": true,
+        "count_failed_submissions": true,
+        "evaluate": {
+            "command": "python evaluate.py --pred_file pred.json --key_file val_key.json",
+            "dependencies": [
+                {
+                    "child_path": "evaluate.py",
+                    "parent_path": "",
+                    "parent_uuid": "0x124e100a68434f7987572382b4ed0935"
+                },
+                {
+                    "child_path": "val_key.json",
+                    "parent_path": "",
+                    "parent_uuid": "0x398100f7229e4f729e46c2ab95cfb130"
+                },
+                {
+                    "child_path": "pred.json",
+                    "parent_path": "",
+                    "parent_uuid": "{predict}"
+                }
+            ],
+            "metadata": {},
+            "tag": "competition-evaluate"
+        },
+        "host": "https://worksheets.codalab.org",
+        "log_worksheet_uuid": "0x067fbb335f0c4db8b6e56c423db4ade5",
+        "make_predictions_public": false,
+        "max_leaderboard_size": 10000,
+        "max_submissions_per_period": 5,
+        "max_submissions_total": 10000,
+        "metadata": {},
+        "predict": {
+            "depth": 10,
+            "metadata": {},
+            "mimic": [
+                {
+                    "new": "0x7b3a41771597439aaa90d3d63470c14c",
+                    "old": "0x398100f7229e4f729e46c2ab95cfb130"
+                }
+            ],
+            "tag": "competition-predict"
+        },
+        "quota_period_seconds": 86400,
+        "refresh_period_seconds": 60,
+        "score_specs": [
+            {
+                "key": "/stdout:All",
+                "name": "accuracy"
+            }
+        ],
+        "submission_tag": "quail-evaluate"
+    },
+    "leaderboard": [
+        {
+            "bundle": {
+                "args": "run evaluate.py:0x124e100a68434f7987572382b4ed0935 val_key.json:0x398100f7229e4f729e46c2ab95cfb130 pred.json:0x3f8ba9f874ef437bae015895ae43f89a \"python evaluate.py --pred_file pred.json --key_file val_key.json\" --request-memory 2g --request-cpus 1",
+                "bundle_type": "run",
+                "command": "python evaluate.py --pred_file pred.json --key_file val_key.json",
+                "data_hash": "0x41e7efcdc2815060b87e023a1430586f83e2445b",
+                "dependencies": [
+                    {
+                        "child_path": "evaluate.py",
+                        "child_uuid": "0x8ffc2456c9974f9baf8cb07f44791574",
+                        "parent_name": "evaluate.py",
+                        "parent_path": "",
+                        "parent_uuid": "0x124e100a68434f7987572382b4ed0935"
+                    },
+                    {
+                        "child_path": "val_key.json",
+                        "child_uuid": "0x8ffc2456c9974f9baf8cb07f44791574",
+                        "parent_name": "val_key.json",
+                        "parent_path": "",
+                        "parent_uuid": "0x398100f7229e4f729e46c2ab95cfb130"
+                    },
+                    {
+                        "child_path": "pred.json",
+                        "child_uuid": "0x8ffc2456c9974f9baf8cb07f44791574",
+                        "parent_name": "matt.downey18-new-predict",
+                        "parent_path": "",
+                        "parent_uuid": "0x3f8ba9f874ef437bae015895ae43f89a"
+                    }
+                ],
+                "id": "0x8ffc2456c9974f9baf8cb07f44791574",
+                "is_anonymous": false,
+                "metadata": {
+                    "actions": [],
+                    "allow_failed_dependencies": false,
+                    "created": 1580932291,
+                    "data_size": 4329,
+                    "description": "My description",
+                    "docker_image": "codalab/default-cpu@sha256:ff7de716ac5f94d9b4ff8d6341d60166ed5b0163cc05d8d51da9418511caf5e1",
+                    "exitcode": 1,
+                    "failure_message": "Exit code 1",
+                    "last_updated": 1580932345,
+                    "name": "matt.downey18-new-results",
+                    "remote": "vm-clws-prod-gpuworker-1",
+                    "request_cpus": 1,
+                    "request_disk": "",
+                    "request_docker_image": "",
+                    "request_gpus": 0,
+                    "request_memory": "2g",
+                    "request_network": false,
+                    "request_priority": 0,
+                    "request_queue": "",
+                    "request_time": "",
+                    "run_status": "Finished",
+                    "started": 1580932320,
+                    "tags": [
+                        "competition-evaluate"
+                    ],
+                    "time": 0.05907,
+                    "time_system": 0.0,
+                    "time_user": 0.0
+                },
+                "owner": {
+                    "id": "0xd72e93b8f2b448fc9318d136e89e555a",
+                    "type": "users"
+                },
+                "permission": 2,
+                "permission_spec": "all",
+                "state": "ready",
+                "uuid": "0x8ffc2456c9974f9baf8cb07f44791574"
+            },
+            "scores": {
+                "accuracy": 25.3,
+                "temporal": 25.1,
+                "causality": 19.2,
+                "factual": 27.4,
+                "coreference": 16.6,
+                "properties": 23.2,
+                "belief": 20.9,
+                "entity": 24.4,
+                "duration": 21.1,
+                "unanswerable": 28.8
+            },
+            "submission": {
+                "created": 1580932291,
+                "description": "Submission description",
+                "num_period_submissions": 0,
+                "num_total_submissions": 0,
+                "public": null,
+                "user_name": "Matt Downey"
+            }
+        }
+    ],
+    "updated": 1580933233.1567247
+}

@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/lab2/css/style.css" />
+  <link rel="shortcut icon" href="/lab2/img/icons/browser_icon.ico"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head><!DOCTYPE html>
+<head>
+  <script>
+  function toggleMenu() {
+      var x = document.getElementById("navmenu");
+      if (x.className === "menu-items") {
+          x.className += " responsive";
+      } else {
+          x.className = "menu-items";
+      }
+  }
+  </script>
+</head>
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container-fluid">
+    <a href="/lab2/">
+      <img src="/lab2//img/icons/text-machine-White-min.png" hspace="20" class='navbar-logo'>
+    </a>
+    <div class="menu-items" id="navmenu">
+      <div class="items-wrapper">
+      <a href="/lab2/"> <span>Home</span></a>
+      <a href="/lab2/projects/"><span>Projects</span></a>
+      <a href="/lab2/events/"><span>Events</span></a>
+      <a href="/lab2/people/"><span>People</span></a>
+      <a href="/lab2/publications/"><span>Publications</span></a>
+      <a href="https://text-machine-lab.github.io/blog/" target="_blank"><span>Blog<img class="blog-icon" src="/lab2/img/icons/external-link.png"></span></a>
+      <a href="/lab2/contact/"><span>Contact</span></a>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+</body>
+  <div class="container personal">
+    
+    <div class="row">
+      <div class="profile-column col-xs-12 col-sm-3 col-md-4 col-lg-3">
+        <h1 class="name-col-1">Peter Potash</h1>
+        <img class="photo-personal" src=/lab2//img/people/peter.jpg>
+        <div class="contacts">
+          
+          
+          
+          
+          <a href="https://scholar.google.com/citations?user=JZ38E6gAAAAJ&amp;hl=en&amp;oi=ao" target="_blank"><img class="share-icon" src="/lab2//img/icons/scholar.png"></a>
+          
+        </div>
+
+        
+        
+        <div class="graduation">
+          
+          <p>Graduated: Aug 2017</p>
+          
+          
+          <p>Degree: PhD</p>
+          
+          
+          <p>Current position: Microsoft Research Maluuba</p>
+          
+        </div>
+        
+      </div>
+      <div class="info-column col-xs-12 col-sm-9 col-md-8 col-lg-9">
+        <h1 class="name-col-2">Peter Potash</h1>
+        <p> <p>I received a Masters in Mathematics and a PhD in Computer Science. My dissertation focused on deep learning strategies for argument mining. I currently work at MSR Maluuba.</p>
+ </p>
+        
+          <div class="link">
+            <a class="btn-sm" href="https://www.microsoft.com/en-us/research/people/pepotash/" target="_blank">Homepage</a>
+          </div>
+        
+
+        
+        <div class="tab">
+          
+            <button class="tablinks" onclick="openTab(event, 'Skills')" id="defaultOpen">Skills</button>
+          
+          
+            
+          
+          
+            
+              <button class="tablinks" onclick="openTab(event, 'Publications')">Publications</button>
+            
+          
+        </div>
+
+        
+        <div id="Skills" class="tabcontent skills-content">
+            
+              
+                
+                  <div class="row">
+                    <div class="skill-name">
+                      <p>Programming</p>
+                    </div>
+                    <div class="skill-description">
+                      
+                      <span class="skill">Python</span>
+                      
+                    </div>
+                  </div>
+                
+              
+            
+              
+                
+                  <div class="row">
+                    <div class="skill-name">
+                      <p>Machine Learning</p>
+                    </div>
+                    <div class="skill-description">
+                      
+                      <span class="skill">TensorFlow</span>
+                      
+                      <span class="skill">scikit-learn</span>
+                      
+                      <span class="skill">PyTorch</span>
+                      
+                    </div>
+                  </div>
+                
+              
+            
+              
+                
+              
+            
+              
+                
+                  <div class="row">
+                    <div class="skill-name">
+                      <p>Languages</p>
+                    </div>
+                    <div class="skill-description">
+                      
+                      <span class="skill">English</span>
+                      
+                    </div>
+                  </div>
+                
+              
+            
+              
+                
+              
+            
+        </div>
+        
+
+        
+
+        
+        <div id="Publications" class="tabcontent">
+          
+            
+            
+            
+              
+              
+              
+              
+              
+              
+              <div class="publication">
+  <img src="/lab2//img/icons/doc.png">
+  <span class="author-container-pub">
+    
+      <span class="author pub">P. Potash</span>
+    
+      <span class="author pub">A. Romanov</span>
+    
+      <span class="author pub">A. Rumshisky</span>
+    
+  </span>
+  
+    <span>
+      GhostWriter: Using an LSTM for Automatic Rap Lyric Generation. (short paper).
+    </span>
+  
+  
+    <span>
+      <em>Proceedings of EMNLP 2015.</em>
+    </span>
+  
+  
+  
+  
+  <div class="citing">
+    
+      <button onclick="window.open('http:\/\/www.aclweb.org\/anthology\/D15-1221.pdf','_blank');" type="button">PDF</button>
+    
+    
+      <button type="button" data-toggle="collapse" data-target="#pub0_2015">BibTeX</button>
+      <div id="pub0_2015" class="collapse">
+        <pre><p>@inproceedings{potash2015ghostwriter,
+title={Ghostwriter: Using an lstm for automatic rap lyric generation},
+author={Potash, Peter and Romanov, Alexey and Rumshisky, Anna},
+booktitle={Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing},
+pages={1919&ndash;1924},
+year={2015}
+}</p>
+</pre>
+      </div>
+    
+  </div>
+</div>
+
+            
+          
+            
+            
+            
+              
+              
+              
+              
+              
+              
+              <div class="publication">
+  <img src="/lab2//img/icons/doc.png">
+  <span class="author-container-pub">
+    
+      <span class="author pub">P. Potash</span>
+    
+      <span class="author pub">A. Rumshisky</span>
+    
+  </span>
+  
+    <span>
+      Recommender System Incorporating User Personality Profile through Analysis of Written Reviews.
+    </span>
+  
+  
+    <span>
+      <em>Proceedings of the EMPIRE workshop at the ACM Conference on Recommender Systems (RecSys 2016).</em>
+    </span>
+  
+  
+  
+  
+  <div class="citing">
+    
+      <button onclick="window.open('http:\/\/www.cs.uml.edu\/~arum\/publications\/Potash_Recsys2015_Empire.pdf','_blank');" type="button">PDF</button>
+    
+    
+      <button type="button" data-toggle="collapse" data-target="#pub1_2016">BibTeX</button>
+      <div id="pub1_2016" class="collapse">
+        <pre><p>@article{potash_recommender_2016,
+author = &ldquo;Potash, Peter and Rumshisky, Anna&rdquo;,
+title = &ldquo;Recommender System Incorporating User Personality Proﬁle through Analysis of Written Reviews&rdquo;,
+language = &ldquo;en&rdquo;,
+journal = &ldquo;Proceedings of EMPIRE workshop at the ACM Conference on Recommender Systems&rdquo;,
+year = &ldquo;2016&rdquo;,
+pages = &ldquo;7&rdquo;
+}</p>
+</pre>
+      </div>
+    
+  </div>
+</div>
+
+            
+          
+            
+            
+            
+              
+              
+              
+              
+              
+              
+              <div class="publication">
+  <img src="/lab2//img/icons/doc.png">
+  <span class="author-container-pub">
+    
+      <span class="author pub">P. Potash</span>
+    
+      <span class="author pub">A. Romanov</span>
+    
+      <span class="author pub">A. Rumshisky</span>
+    
+  </span>
+  
+    <span>
+      Here&#39;s My Point: Joint Pointer Architecture for Argument Mining.
+    </span>
+  
+  
+    <span>
+      <em>Proceedings of EMNLP 2017.</em>
+    </span>
+  
+  
+  
+  
+  <div class="citing">
+    
+      <button onclick="window.open('http:\/\/aclweb.org\/anthology\/D17-1143.pdf','_blank');" type="button">PDF</button>
+    
+    
+      <button type="button" data-toggle="collapse" data-target="#pub2_2017">BibTeX</button>
+      <div id="pub2_2017" class="collapse">
+        <pre><p>@inproceedings{potash2017here,
+title={Here’s My Point: Joint Pointer Architecture for Argument Mining},
+author={Potash, Peter and Romanov, Alexey and Rumshisky, Anna},
+booktitle={Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing},
+pages={1364&ndash;1373},
+year={2017}
+}</p>
+</pre>
+      </div>
+    
+  </div>
+</div>
+
+            
+          
+            
+            
+            
+              
+              
+              
+              
+              
+              
+              <div class="publication">
+  <img src="/lab2//img/icons/doc.png">
+  <span class="author-container-pub">
+    
+      <span class="author pub">P. Potash</span>
+    
+      <span class="author pub">R. Bhattacharya</span>
+    
+      <span class="author pub">A. Rumshisky</span>
+    
+  </span>
+  
+    <span>
+      Length, Interchangeability, and External Knowledge: Observations from Predicting Argument Convincingness.
+    </span>
+  
+  
+    <span>
+      <em>Proceedings of IJCNLP 2017.</em>
+    </span>
+  
+  
+  
+  
+  <div class="citing">
+    
+      <button onclick="window.open('http:\/\/aclweb.org\/anthology\/I17-1035.pdf','_blank');" type="button">PDF</button>
+    
+    
+      <button type="button" data-toggle="collapse" data-target="#pub3_2017">BibTeX</button>
+      <div id="pub3_2017" class="collapse">
+        <pre><p>@inproceedings{potash_length_2017,
+author = &ldquo;Potash, Peter and Bhattacharya, Robin and Rumshisky, Anna&rdquo;,
+address = &ldquo;Taipei, Taiwan&rdquo;,
+title = &ldquo;Length, {Interchangeability}, and {External} {Knowledge}: {Observations} from {Predicting} {Argument} {Convincingness}&quot;,
+booktitle = &ldquo;Proceedings of the {Eighth} {International} {Joint} {Conference} on {Natural} {Language} {Processing} ({Volume} 1: {Long} {Papers})&quot;,
+publisher = &ldquo;Asian Federation of Natural Language Processing&rdquo;,
+year = &ldquo;2017&rdquo;,
+pages = &ldquo;342&ndash;351&rdquo;
+}</p>
+</pre>
+      </div>
+    
+  </div>
+</div>
+
+            
+          
+            
+            
+            
+              
+              
+              
+              
+              
+              
+              <div class="publication">
+  <img src="/lab2//img/icons/doc.png">
+  <span class="author-container-pub">
+    
+      <span class="author pub">P. Potash</span>
+    
+      <span class="author pub">A. Romanov</span>
+    
+      <span class="author pub">A. Rumshisky</span>
+    
+  </span>
+  
+    <span>
+      SemEval-2017 Task 6: HashtagWars: Learning a Sense of Humor.
+    </span>
+  
+  
+    <span>
+      <em>The 11th International Workshop on Semantic Evaluation (SemEval-2017). ACL 2017.</em>
+    </span>
+  
+  
+  
+  
+  <div class="citing">
+    
+      <button onclick="window.open('http:\/\/www.aclweb.org\/anthology\/S17-2004.pdf','_blank');" type="button">PDF</button>
+    
+    
+      <button type="button" data-toggle="collapse" data-target="#pub4_2017">BibTeX</button>
+      <div id="pub4_2017" class="collapse">
+        <pre><p>@inproceedings{potash_semeval-2017_2017,
+author = &ldquo;Potash, Peter and Romanov, Alexey and Rumshisky, Anna&rdquo;,
+address = &ldquo;Vancouver, Canada&rdquo;,
+title = &ldquo;{SemEval}-2017 {Task} 6: \#{HashtagWars}: {Learning} a {Sense} of {Humor}&quot;,
+doi = &ldquo;10.18653/v1/S17-2004&rdquo;,
+booktitle = &ldquo;Proceedings of the 11th {International} {Workshop} on {Semantic} {Evaluation} ({SemEval}-2017)&quot;,
+publisher = &ldquo;Association for Computational Linguistics&rdquo;,
+year = &ldquo;2017&rdquo;,
+pages = &ldquo;49&ndash;57&rdquo;
+}</p>
+</pre>
+      </div>
+    
+  </div>
+</div>
+
+            
+          
+            
+            
+            
+              
+              
+              
+              
+              
+              
+              <div class="publication">
+  <img src="/lab2//img/icons/doc.png">
+  <span class="author-container-pub">
+    
+      <span class="author pub">P. Potash</span>
+    
+      <span class="author pub">A. Rumshisky</span>
+    
+  </span>
+  
+    <span>
+      Towards Debate Automation: a Recurrent Model for Predicting Debate Winners.
+    </span>
+  
+  
+    <span>
+      <em>Proceedings of EMNLP 2017.</em>
+    </span>
+  
+  
+  
+  
+  <div class="citing">
+    
+      <button onclick="window.open('http:\/\/aclweb.org\/anthology\/D17-1261.pdf','_blank');" type="button">PDF</button>
+    
+    
+      <button type="button" data-toggle="collapse" data-target="#pub5_2017">BibTeX</button>
+      <div id="pub5_2017" class="collapse">
+        <pre><p>@inproceedings{potash_towards_2017,
+author = &ldquo;Potash, Peter and Rumshisky, Anna&rdquo;,
+address = &ldquo;Copenhagen, Denmark&rdquo;,
+title = &ldquo;Towards {Debate} {Automation}: a {Recurrent} {Model} for {Predicting} {Debate} {Winners}&quot;,
+booktitle = &ldquo;Proceedings of the 2017 {Conference} on {Empirical} {Methods} in {Natural} {Language} {Processing}&quot;,
+publisher = &ldquo;Association for Computational Linguistics&rdquo;,
+year = &ldquo;2017&rdquo;,
+pages = &ldquo;2465&ndash;2475&rdquo;
+}</p>
+</pre>
+      </div>
+    
+  </div>
+</div>
+
+            
+          
+            
+            
+            
+              
+              
+              
+              
+              
+              
+              <div class="publication">
+  <img src="/lab2//img/icons/doc.png">
+  <span class="author-container-pub">
+    
+      <span class="author pub">P. Potash</span>
+    
+      <span class="author pub">A. Romanov</span>
+    
+      <span class="author pub">M. Gronas</span>
+    
+      <span class="author pub">A. Rumshisky</span>
+    
+      <span class="author pub">M. Gronas</span>
+    
+  </span>
+  
+    <span>
+      Tracking Bias in News Sources Using Social Media: the Russia-Ukraine Maidan Crisis of 2013-2014.
+    </span>
+  
+  
+    <span>
+      <em>EMNLP 2017 Workshop &#34;NLP Meets Journalism&#34;.</em>
+    </span>
+  
+  
+  
+  
+  <div class="citing">
+    
+      <button onclick="window.open('http:\/\/aclweb.org\/anthology\/W17-4203.pdf','_blank');" type="button">PDF</button>
+    
+    
+      <button type="button" data-toggle="collapse" data-target="#pub6_2017">BibTeX</button>
+      <div id="pub6_2017" class="collapse">
+        <pre><p>@inproceedings{potash_tracking_2017,
+author = &ldquo;Potash, Peter and Romanov, Alexey and Gronas, Mikhail and Rumshisky, Anna and Gronas, Mikhail&rdquo;,
+address = &ldquo;Copenhagen, Denmark&rdquo;,
+title = &ldquo;Tracking {Bias} in {News} {Sources} {Using} {Social} {Media}: the {Russia}-{Ukraine} {Maidan} {Crisis} of 2013–2014&rdquo;,
+booktitle = &ldquo;Proceedings of the 2017 {EMNLP} {Workshop}: {Natural} {Language} {Processing} meets {Journalism}&quot;,
+publisher = &ldquo;Association for Computational Linguistics&rdquo;,
+year = &ldquo;2017&rdquo;,
+pages = &ldquo;13&ndash;18&rdquo;
+}</p>
+</pre>
+      </div>
+    
+  </div>
+</div>
+
+            
+          
+            
+            
+            
+              
+              
+              
+              
+              
+              
+              <div class="publication">
+  <img src="/lab2//img/icons/doc.png">
+  <span class="author-container-pub">
+    
+      <span class="author pub">P. Potash</span>
+    
+      <span class="author pub">A. Romanov</span>
+    
+      <span class="author pub">A. Rumshisky</span>
+    
+  </span>
+  
+    <span>
+      Evaluating Creative Language Generation: The Case of Rap Lyric Ghostwriting.
+    </span>
+  
+  
+    <span>
+      <em>Proceedings of the Second Workshop on Stylistic Variation, Association for Computational Linguistics.</em>
+    </span>
+  
+  
+  
+  
+  <div class="citing">
+    
+      <button onclick="window.open('http:\/\/aclweb.org\/anthology\/W18-1604.pdf','_blank');" type="button">PDF</button>
+    
+    
+      <button type="button" data-toggle="collapse" data-target="#pub7_2018">BibTeX</button>
+      <div id="pub7_2018" class="collapse">
+        <pre><p>@inproceedings{potash_evaluating_2018,
+author = &ldquo;Potash, Peter and Romanov, Alexey and Rumshisky, Anna&rdquo;,
+address = &ldquo;New Orleans&rdquo;,
+title = &ldquo;Evaluating {Creative} {Language} {Generation}: {The} {Case} of {Rap} {Lyric} {Ghostwriting}&quot;,
+booktitle = &ldquo;Proceedings of the {Second} {Workshop} on {Stylistic} {Variation}&quot;,
+publisher = &ldquo;Association for Computational Linguistics&rdquo;,
+year = &ldquo;2018&rdquo;,
+pages = &ldquo;29--38&rdquo;
+}</p>
+</pre>
+      </div>
+    
+  </div>
+</div>
+
+            
+          
+          </div>
+        
+        
+      </div>
+    </div>
+    </div>
+</body>
+<script>
+  function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+  }
+
+  
+  document.getElementById("defaultOpen").click();
+</script><!DOCTYPE html>
+  <footer class="site-footer">
+    <center><a href="https://www.uml.edu/" target="_blank">
+      <img src="/lab2//img/icons/uml.png" alt="UML" height="42" ></center></a>
+    <div class="container">
+      <p class="powered-by">
+        &copy Text Machine Lab. Powered by Hugo.
+      </p>
+    </div>
+  </footer>

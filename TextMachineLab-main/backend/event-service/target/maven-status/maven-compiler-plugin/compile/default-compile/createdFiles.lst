@@ -1,0 +1,9 @@
+com\textmachinelab\event\controller\FileUploadController.class
+com\textmachinelab\event\EventServiceApplication.class
+com\textmachinelab\event\repository\CategoryRepository.class
+com\textmachinelab\event\service\EventService.class
+com\textmachinelab\event\entity\Event.class
+com\textmachinelab\event\repository\EventRepository.class
+com\textmachinelab\event\config\WebConfig.class
+com\textmachinelab\event\controller\EventController.class
+com\textmachinelab\event\entity\Category.class

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="shortcut icon" href="/img/icons/browser_icon.ico"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="/js/imageStorage.js"></script>
+  <script src="/js/contentLoader.js"></script>
+</head><!DOCTYPE html>
+<head>
+  <script>
+  function toggleMenu() {
+      var sidebar = document.getElementById("mobileSidebar");
+      var overlay = document.getElementById("sidebarOverlay");
+      var body = document.body;
+      
+      if (sidebar.classList.contains("active")) {
+          sidebar.classList.remove("active");
+          overlay.classList.remove("active");
+          body.style.overflow = "";
+      } else {
+          sidebar.classList.add("active");
+          overlay.classList.add("active");
+          body.style.overflow = "hidden";
+      }
+  }
+  </script>
+</head>
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container-fluid">
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-menu" onclick="toggleMenu()" aria-label="Toggle menu">
+      <div class="hamburger-lines">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+    
+    <a href="/">
+      <img src="/img/icons/text-machine-White-min.png" hspace="20" class='navbar-logo'>
+    </a>
+    
+    <!-- Desktop Menu -->
+    <div class="menu-items desktop-menu">
+      <div class="items-wrapper">
+        <a href="/"> <span>Home</span></a>
+        <a href="/projects/"><span>Projects</span></a>
+        <a href="/events/"><span>Events</span></a>
+        <a href="/people/"><span>People</span></a>
+        <a href="/publications/"><span>Publications</span></a>
+        <a href="https://text-machine-lab.github.io/blog/" target="_blank"><span>Blog<img class="blog-icon" src="/img/icons/external-link.png"></span></a>
+        <a href="/contact/"><span>Contact</span></a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Left Sidebar Menu -->
+  <div class="mobile-sidebar" id="mobileSidebar">
+    <div class="sidebar-content">
+      <button class="close-btn" onclick="toggleMenu()">&times;</button>
+      <div class="sidebar-links">
+        <a href="/" onclick="toggleMenu()">Home</a>
+        <a href="/projects/" onclick="toggleMenu()">Projects</a>
+        <a href="/events/" onclick="toggleMenu()">Events</a>
+        <a href="/people/" onclick="toggleMenu()">People</a>
+        <a href="/publications/" onclick="toggleMenu()">Publications</a>
+        <a href="https://text-machine-lab.github.io/blog/" target="_blank" onclick="toggleMenu()">Blog <i class="fa fa-external-link"></i></a>
+        <a href="/contact/" onclick="toggleMenu()">Contact</a>
+        <div class="sidebar-divider"></div>
+        <a href="/login/" class="sidebar-login-btn" onclick="toggleMenu()">
+          <i class="fa fa-sign-in"></i> Login
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleMenu()"></div>
+</nav>
+<body>
+    
+        
+            
+                
+                    
+            
+        
+    
+            
+    
+            
+                
+        
+    
+            
+                
+                    
+            
+        
+    
+            
+                
+                    
+            
+        
+    
+            
+                
+                    
+            
+        
+    
+            
+    
+            
+    
+    
+    <div class="container">
+        <div class="row top-bar">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <h1> Organized events </h1>
+                </div>
+                
+                <div id="button-container" class="all-buttons" data-spy="affix">
+                    <button class="tags-button active" onclick="filterSelection('all')" id="defaultOpen">Show all</button>
+                    
+                        <button class="tags-button" onclick="filterSelection('Archive')">#Archive</button>
+                    
+                        <button class="tags-button" onclick="filterSelection('Biomedical')">#Biomedical</button>
+                    
+                        <button class="tags-button" onclick="filterSelection('Humor')">#Humor</button>
+                    
+                        <button class="tags-button" onclick="filterSelection('Representations')">#Representations</button>
+                    
+                </div>
+            </div>
+			
+			
+			<div class="row project-container filterDiv  type">
+                <div class="col-md-5">
+                    
+                        <img class="project-image" src=//img/events/nenlp.png>
+                    
+                </div>
+                <div class="col-md-7"> 
+                    <div class="project-title">
+                    
+                        
+                          <h4><a href="https://nenlp.github.io/spr2022/" target="_blank">New England NLP Meeting Series<img class="icon" src="/img/icons/external-link.png"></a></h4>
+                        
+                
+                      
+                    </div>
+                    <div class="project-description">
+                        <p><p>NENLP is a meeting series for academic and industry NLP researchers that live and work in New England</p>
+</p>
+                    </div>
+                    <div class="buttons-container">
+                        
+                    </div>
+                </div>
+            </div>
+
+        
+
+            <div class="row project-container filterDiv  type">
+                <div class="col-md-5">
+                    
+                        <img class="project-image" src=//img/projects/default.png>
+                    
+                </div>
+                <div class="col-md-7"> 
+                    <div class="project-title">
+                    
+                        
+                          <h4><a href="https://coling2020.org/2019/11/20/tutorials.html" target="_blank">A Guide to the Dataset Explosion in QA, NLI, and Commonsense Reasoning<img class="icon" src="/img/icons/external-link.png"></a></h4>
+                        
+                
+                      
+                    </div>
+                    <div class="project-description">
+                        <p><p>Accepted to COLING 2020</p>
+</p>
+                    </div>
+                    <div class="buttons-container">
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="row project-container filterDiv  type">
+                <div class="col-md-5">
+                    
+                        <img class="project-image" src=//img/events/insights.png>
+                    
+                </div>
+                <div class="col-md-7"> 
+                    <div class="project-title">
+                    
+                        
+                          <h4><a href="https://insights-workshop.github.io/" target="_blank">Workshop on Insights from Negative Results in NLP<img class="icon" src="/img/icons/external-link.png"></a></h4>
+                        
+                
+                      
+                    </div>
+                    <div class="project-description">
+                        <p><p>This workshop invites both practical and theoretical unexpected or negative results that have important implications for future research, highlight methodological issues with existing approaches, and/or point out pervasive misunderstandings or bad practices. In particular, the most successful NLP models currently rely on different kinds of pretrained meaning representations (from word embeddings to Transformer-based models like BERT). To complement all the success stories, it would be insightful to see where and possibly why they fail. Any NLP tasks are welcome: sequence labeling, question answering, inference, dialogue, machine translation - you name it.</p>
+</p>
+                    </div>
+                    <div class="buttons-container">
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="row project-container filterDiv Biomedical type3">
+                <div class="col-md-5">
+                    
+                        <img class="project-image" src=//img/events/clinicalworkshop.png>
+                    
+                </div>
+                <div class="col-md-7"> 
+                    <div class="project-title">
+                    
+                        
+                          <h4><a href="https://clinical-nlp.github.io" target="_blank">Clinical NLP workshop series<img class="icon" src="/img/icons/external-link.png"></a></h4>
+                        
+                
+                      
+                    </div>
+                    <div class="project-description">
+                        <p><p>Clinical NLP workshop series is a series of workshops that address the unique challenges of dealing with clinical narrative from the electronic health records.  Doctor's and nursing notes, radiology reports, discharge summaries, and other clinical narrative notes contain unique information about disease trajectories, patient outcomes, drug side effects, and other related issues.   The goal of Clinical NLP is develop in-domain methods to utilize this information.</p>
+<p>Clinical NLP workshops are co-located with the main CL venues, and their aim is to encourage general-domain NLP researchers to get involved, bringing their expertise to this exciting field.  Here is the list of workshops in this series held to date:</p>
+<ul>
+<li>
+<p><a href="https://clinical-nlp.github.io/2016/program.html">Clinical NLP 2016</a></p>
+</li>
+<li>
+<p><a href="https://clinical-nlp.github.io/2019/program.html">Clinical NLP 2019</a></p>
+</li>
+<li>
+<p><a href="https://clinical-nlp.github.io/2020/program.html">Clinical NLP 2020</a></p>
+</li>
+</ul>
+</p>
+                    </div>
+                    <div class="buttons-container">
+                        
+                        <button class="tags-button" onclick="filterSelection('Biomedical')">
+                        #Biomedical
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="row project-container filterDiv Biomedical type3">
+                <div class="col-md-5">
+                    
+                        <img class="project-image" src=//img/projects/default.png>
+                    
+                </div>
+                <div class="col-md-7"> 
+                    <div class="project-title">
+                    
+                        
+                          <h4><a href="https://n2c2.dbmi.hms.harvard.edu/track3" target="_blank">2019 n2c2 Shared-Task and Workshop<img class="icon" src="/img/icons/external-link.png"></a></h4>
+                        
+                
+                      
+                    </div>
+                    <div class="project-description">
+                        <p><p>We organized a shared task on normalization of clinical concepts in provider notes to standardized vocabularies. This task was originally scheduled to run at the 2019 SemEval as Task 11, but was delayed due to the data access issues.  It has now run in the Spring of 2019 as an i2b2 spin-off shared task, with results presented at a N2C2 workshop collocated with AMIA 2019.</p>
+<p>Check out our task video here: <a href="https://www.youtube.com/watch?v=uYZTqYxo9AU">https://www.youtube.com/watch?v=uYZTqYxo9AU</a></p>
+</p>
+                    </div>
+                    <div class="buttons-container">
+                        
+                        <button class="tags-button" onclick="filterSelection('Biomedical')">
+                        #Biomedical
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="row project-container filterDiv  type">
+                <div class="col-md-5">
+                    
+                        <img class="project-image" src=//img/events/repeval.png>
+                    
+                </div>
+                <div class="col-md-7"> 
+                    <div class="project-title">
+                    
+                        
+                          <h4><a href="https://repeval2019.github.io/" target="_blank">RepEval2019<img class="icon" src="/img/icons/external-link.png"></a></h4>
+                        
+                
+                      
+                    </div>
+                    <div class="project-description">
+                        <p><p>The third edition of RepEval aims to support the search for high-quality general purpose representation learning techniques for NLP. We hope to encourage interdisciplinary dialogue by welcoming diverse perspectives on the above issues: submissions may focus on properties of embedding space, performance analysis for various downstream tasks, as well as approaches based on linguistic and psychological data. In particular, experts from the latter fields are encouraged to contribute analysis of claims previously made in NLP community.</p>
+</p>
+                    </div>
+                    <div class="buttons-container">
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="row project-container filterDiv Representations type2">
+                <div class="col-md-5">
+                    
+                        <img class="project-image" src=//img/projects/default.png>
+                    
+                </div>
+                <div class="col-md-7"> 
+                    <div class="project-title">
+                    
+                        
+                          <h4><a href="http://text-machine.cs.uml.edu/lrec2018_t4/index.html" target="_blank">LREC 2018 T4: Distributional compositional semantics in the age of word embeddings: tasks, resources and methodology<img class="icon" src="/img/icons/external-link.png"></a></h4>
+                        
+                
+                      
+                    </div>
+                    <div class="project-description">
+                        <p><p>This tutorial covered the current proposals for representation and interpretation of semantic features in word-level word embeddings, representation of morphological information, building sentence representations and encoding abstract linguistic structures that are necessary for grammar but hard to capture distributionally. For each problem we discussed the existing evaluation datasets and ways to improve them.</p>
+</p>
+                    </div>
+                    <div class="buttons-container">
+                        
+                        <button class="tags-button" onclick="filterSelection('Representations')">
+                        #Representations
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="row project-container filterDiv Humor type1">
+                <div class="col-md-5">
+                    
+                        <img class="project-image" src=//img/projects/default.png>
+                    
+                </div>
+                <div class="col-md-7"> 
+                    <div class="project-title">
+                    
+                        
+                          <h4><a href="http://alt.qcri.org/semeval2017/task6/" target="_blank">SemEval-2017 Task 6: #HashtagWars: Learning a Sense of Humor<img class="icon" src="/img/icons/external-link.png"></a></h4>
+                        
+                
+                      
+                    </div>
+                    <div class="project-description">
+                        <p><p>This task aimed to stimulate the development of novel methods of humour detection that would not treat humor as a binary variable, and also take into account its subjectivity. The shared task was run with a new dataset based on humorous responses submitted to a Comedy Central TV show.</p>
+</p>
+                    </div>
+                    <div class="buttons-container">
+                        
+                        <button class="tags-button" onclick="filterSelection('Humor')">
+                        #Humor
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="row project-container filterDiv Archive type2">
+                <div class="col-md-5">
+                    
+                        <img class="project-image" src=//img/projects/default.png>
+                    
+                </div>
+                <div class="col-md-7"> 
+                    <div class="project-title">
+                    
+                        
+                          <h4><a href="http://www.lrec-conf.org/proceedings/lrec2014/index.html" target="_blank">LREC 2014 T2: Deep Semantic Annotation with Shallow Methods.  May 26th, 2014, Reykjavik, Iceland<img class="icon" src="/img/icons/external-link.png"></a></h4>
+                        
+                
+                      
+                    </div>
+                    <div class="project-description">
+                        <p><p>This tutorial provided a detailed introduction to Deep Semantic Annotation, and practical guidance for decomposition of complex deep tasks for their annotation with Mechanical Turk.</p>
+</p>
+                    </div>
+                    <div class="buttons-container">
+                        
+                        <button class="tags-button" onclick="filterSelection('Archive')">
+                        #Archive
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</body>
+
+
+<script>
+        filterSelection("all")
+        function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterDiv");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+        }
+        }
+        function AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+        }
+    
+        function RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+        }
+        element.className = arr1.join(" ");
+        }
+    
+        
+        var btnContainer = document.getElementById("button-container");
+        var btns = btnContainer.getElementsByClassName("tags-button");
+        for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+        }
+    </script>
