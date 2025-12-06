@@ -1,9 +1,14 @@
 import React from "react";
+import { useLanguage } from "../../context/LanguageContext";
+import { translations } from "../../translations/translations";
 
 function ConceptNorm(): React.ReactElement {
+  const { language } = useLanguage();
+  const t = translations.conceptnorm[language];
+
   return (
     <div className="container">
-        <h1>Medical Concept Normalization</h1>
+        <h1>{t.title}</h1>
     </div>
   );
 }
