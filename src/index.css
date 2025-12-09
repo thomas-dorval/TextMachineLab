@@ -43,6 +43,12 @@ h1 {
   color: maroon;
 }
 
+h2 {
+  font-size: 1.5em;
+  line-height: 1.1;
+  color: maroon;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;

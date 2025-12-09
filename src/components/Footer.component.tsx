@@ -2,7 +2,7 @@ import uml from "../assets/uml.png";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../translations/translations";
 
-function Footer() {
+export default function Footer() {
     const { language } = useLanguage();
     const t = translations.footer[language];
 
@@ -15,5 +15,3 @@ function Footer() {
     </footer>
   );
 }
-
-export default Footer;

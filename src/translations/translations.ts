@@ -33,6 +33,18 @@ export const translations = {
       externalPages: "Внешние страницы",
     },
   },
+  card: {
+    EN: {
+      skills: "Skills",
+      projects: "Projects",
+      publications: "Publications",
+    },
+    RU: {
+      skills: "Навыки",
+      projects: "Проекты",
+      publications: "Публикации",
+    }
+  },
   footer: {
     EN: {
       copyright: "© Text Machine Lab.",
@@ -52,6 +64,15 @@ export const translations = {
         "Clinical natural language processing, including information extraction, and predictive modeling using clinical patient records.",
         "NLP for educational applications, digital knowledge and sentiment tracking for digital humanities and social science.",
       ],
+      news: "News",
+      newsItems: [
+        "The second New England NLP Meetup NENLP Meetup was held in April 2023 at UMass Lowell.",
+        "The first New England NLP Meetup NENLP Meetup was held in April 2022 at MIT.",
+        "We orgnized the Clinial NLP Workshop at NAACL 2022 Clinial NLP Workshop 2022.",
+        "We conducted the Insights from Negative results from NLP workshop 2022 Insights from Negative results from NLP workshop at ACL 2022.",
+        "Anna Rumshisky served as Program Chair for NAACL 2021.",
+        "All news prior to 2019 can be found in our Archived News page.",
+      ],
     },
     RU: {
       title: "Лаборатория Text Machine",
@@ -63,6 +84,15 @@ export const translations = {
         "Клиническая обработка естественного языка, включая извлечение информации и прогностическое моделирование с использованием клинических записей пациентов.",
         "NLP для образовательных приложений, отслеживание цифровых знаний и настроений для цифровых гуманитарных наук и социальных наук.",
       ],
+      news: "Новости",
+      newsItems: [
+        "Вторая встреча New England NLP Meetup NENLP Meetup состоялась в апреле 2023 года в UMass Lowell.",
+        "Первая встреча New England NLP Meetup NENLP Meetup состоялась в апреле 2022 года в MIT.",
+        "Мы организовали семинар по клиническому NLP на NAACL 2022 Clinial NLP Workshop 2022.",
+        "Мы провели семинар Insights from Negative results from NLP workshop 2022 Insights from Negative results from NLP workshop на ACL 2022.",
+        "Анна Румшицкий была председателем программы NAACL 2021.",
+        "Все новости до 2019 года можно найти на нашей странице архивированных новостей.",
+      ]
     },
   },
   projects: {
@@ -84,9 +114,21 @@ export const translations = {
   people: {
     EN: {
       title: "People",
+      anna: {
+        title: "Anna Rumshisky",
+        alt: "Photo of Anna Rumshisky",
+        label: "Website",
+        tags: ["PI", "Associate Professor", "NLP", "Deep Learning", "Clinical NLP", "Interpretability"],
+      },
     },
     RU: {
       title: "Люди",
+      anna: {
+        title: "Анна Румшицкий",
+        alt: "Фото Анны Румшицкий",
+        label: "Сайт",
+        tags: ["PI", "Доцент", "NLP", "Глубокое обучение", "Клинический NLP", "Интерпретируемость"],
+      },
     },
   },
   publications: {
