@@ -58,4 +58,4 @@ export default function CollapsableCard({ title, image, link, alt, content, tags
 }
 
 // https://codesandbox.io/p/sandbox/react-collapsible-card-75uvm?file=%2Fsrc%2FApp.js
-// https://stackoverflow.com/questions/33381029/how-to-pass-html-tags-in-props
+// https://www.npmjs.com/package/react-tabs

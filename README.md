@@ -1,73 +1,22 @@
-# React + TypeScript + Vite
+# Text Machine Lab Website for Internet and Web Systems I
+This website is built off of Vite + React utilizing TypeScript. If someone else is being handed this project after the duration of this class, I heavily suggest you get Vite + React so you can utilizing the dynamic loading of the page while editing, as the config file has been included, unlike the previous version of the site designed in Hugo.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The core of the website is the same as any usual Vite project, being based in the "App.tsx" file, and it utilizes "react-router-dom" to turn the pages into dynamically loaded pages via the router. All pages for the site are contained in "src/assets/pages". 
 
-Currently, two official plugins are available:
+Most of the actual elements on the pages are components located in "src/assets/components". There are seven components at the time of writing this, the Navigation Bar, Navigation Dropdown, Language Switcher, Image Carousel, Collapsable Cards, and Footer. Most of the content of the pages is contained in Collapsable Cards. The library "react-tabs" is also used in the Collapsable Cards, though I haven't actually tested if this implementation works. It is supposed to load inside of the cards so that the functionality from the original site can be maintained.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+All normal language (not including things like URLs or emails) is contained in the "src/assets/translations/translations.ts" file. If I had more time or skill, I would suggest breaking up the translation files into smaller, more easy to digest pieces. Similarly to the "App.css" file, it is a bit of a monster, containing language for the entire website in a single file. Turning it into a directory would make it much easier to navigate. The same with the .css file. There is some CSS code in "index.css" as well, but it is mostly for individual elements across the site rather than named components of the app.
 
-## React Compiler
+TO-DO:
+- Enable "by tag" search; conglomerate all of the tags at the top of the pages utilizing cards and allow the user to click on the tags to toggle which cards are visible. This was functionality avaliable on the original site.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- Break up "App.css" and "translations.ts" to be less monstrous.
 
-## Expanding the ESLint configuration
+- Fill in the rest of the missing content.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Add a table of publications based on the Google Scholar API.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Find a functional API for Twitter and replace the "News" section on the homepage with a Twitter feed.
+  - Alternatively, one could implement a blog.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Break up the elements of translations into interfaces so that interfaces can be passed to the components instead of length strings, in order to make adding new entries less daunting. If possible, mapping an array of interfaces to make the cards instead should be considered because it would be less awful. This could also be database driven, to tie in with the originally desired login page.
