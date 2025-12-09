@@ -7,7 +7,7 @@ Most of the actual elements on the pages are components located in "src/assets/c
 
 All normal language (not including things like URLs or emails) is contained in the "src/assets/translations/translations.ts" file. If I had more time or skill, I would suggest breaking up the translation files into smaller, more easy to digest pieces. Similarly to the "App.css" file, it is a bit of a monster, containing language for the entire website in a single file. Turning it into a directory would make it much easier to navigate. The same with the .css file. There is some CSS code in "index.css" as well, but it is mostly for individual elements across the site rather than named components of the app.
 
-TO-DO:
+## TO-DO:
 - Enable "by tag" search; conglomerate all of the tags at the top of the pages utilizing cards and allow the user to click on the tags to toggle which cards are visible. This was functionality avaliable on the original site.
 
 - Break up "App.css" and "translations.ts" to be less monstrous.
