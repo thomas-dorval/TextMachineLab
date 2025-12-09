@@ -13,7 +13,7 @@ function People(): React.ReactElement {
       <ImageCarousel />
       <div className="container">
         <h1>{t.title}</h1>
-        <CollapsableCard title={t.anna.title} image="src/assets/people/anna.jpg" alt={t.anna.alt} content="" tags={t.anna.tags} buttons = {[{label: t.anna.label, href: "https://www.cs.uml.edu/~arum/"}]} skillDesc = "" projDesc="" pubDesc=""/>
+        <CollapsableCard title={t.anna.title} image="src/assets/people/anna.jpg" alt={t.anna.alt} content="" tags={[]} buttons = {[{label: t.anna.label, href: "https://www.cs.uml.edu/~arum/"}]} skillDesc = "" projDesc="" pubDesc=""/>
       </div>
     </>
   );

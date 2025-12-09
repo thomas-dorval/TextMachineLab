@@ -118,7 +118,6 @@ export const translations = {
         title: "Anna Rumshisky",
         alt: "Photo of Anna Rumshisky",
         label: "Website",
-        tags: ["PI", "Associate Professor", "NLP", "Deep Learning", "Clinical NLP", "Interpretability"],
       },
     },
     RU: {
@@ -127,7 +126,6 @@ export const translations = {
         title: "Анна Румшицкий",
         alt: "Фото Анны Румшицкий",
         label: "Сайт",
-        tags: ["PI", "Доцент", "NLP", "Глубокое обучение", "Клинический NLP", "Интерпретируемость"],
       },
     },
   },
