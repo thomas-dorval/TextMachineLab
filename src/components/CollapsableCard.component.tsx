@@ -22,8 +22,8 @@ export default function CollapsableCard({ title, image, link, alt, content, tags
       </h2>
       {toggle && (
         <div className="card-content">
-            <a href={link}>
-              <img src={image} className="card-image" alt={alt}/>
+            <a href={link}  className="card-image-link">
+              <img src={image} alt={alt} className="card-image"/>
             </a>
             <div className="card-description">{content}</div>
             <div className="card-buttons">{buttons.map((button, index) => (<a className="card-button" key={index} href={button.href} target="_blank" rel="noopener noreferrer">{button.label}</a>))}</div>

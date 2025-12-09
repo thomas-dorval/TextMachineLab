@@ -10,9 +10,9 @@ function Projects(): React.ReactElement {
   return (
     <div className="container">
       <h1>{t.title}</h1>
-      <CollapsableCard title={t.quail} image="src/assets/projects/quail-logo.png" link="" alt={t.quailAlt} content={t.quailDesc} tags={[]} buttons={[]} skillDesc="" projDesc="" pubDesc=""/>
-      <CollapsableCard title={t.rusentiment} image="src/assets/projects/rusentiment.png" link="" alt={t.rusentimentAlt} content={t.rusentimentDesc} tags={t.rusentimentTags} buttons={[]} skillDesc="" projDesc="" pubDesc=""/>
-      <CollapsableCard title={t.conceptnorm} image="src/assets/projects/default.png" link="" alt={t.conceptnormAlt} content={t.conceptnormDesc} tags={t.conceptnormTags} buttons={[]} skillDesc="" projDesc="" pubDesc=""/>
+      <CollapsableCard title={t.quail} image="src/assets/projects/quail-logo.png" link="/projects/quail" alt={t.quailAlt} content={t.quailDesc} tags={[]} buttons={[]} skillDesc="" projDesc="" pubDesc=""/>
+      <CollapsableCard title={t.rusentiment} image="src/assets/projects/rusentiment.png" link="/projects/rusentiment" alt={t.rusentimentAlt} content={t.rusentimentDesc} tags={t.rusentimentTags} buttons={[]} skillDesc="" projDesc="" pubDesc=""/>
+      <CollapsableCard title={t.conceptnorm} image="src/assets/projects/default.png" link="/projects/conceptnorm" alt={t.conceptnormAlt} content={t.conceptnormDesc} tags={t.conceptnormTags} buttons={[]} skillDesc="" projDesc="" pubDesc=""/>
       
     </div>
   );

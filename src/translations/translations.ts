@@ -132,9 +132,15 @@ export const translations = {
   events: {
     EN: {
       title: "Events",
+      nenlp: "Workshop on Insights from Negative Results in NLP",
+      nenlpAlt: "A picture of a cartoon lemon with a squiggly arrow pointing to a glass of lemonade.",
+      nenlpDesc: "This workshop invites both practical and theoretical unexpected or negative results that have important implications for future research, highlight methodological issues with existing approaches, and/or point out pervasive misunderstandings or bad practices. In particular, the most successful NLP models currently rely on different kinds of pretrained meaning representations (from word embeddings to Transformer-based models like BERT). To complement all the success stories, it would be insightful to see where and possibly why they fail. Any NLP tasks are welcome: sequence labeling, question answering, inference, dialogue, machine translation - you name it.",
     },
     RU: {
       title: "События",
+      nenlp: "Мастерская по получению информации из отрицательных результатов в NLP",
+      nenlpAlt: "Изображение мультяшного лимона с извилистой стрелкой, указывающей на стакан лимонада.",
+      nenlpDesc: "Эта мастерская приглашает как практические, так и теоретические неожиданные или отрицательные результаты, которые имеют важные последствия для будущих исследований, подчеркивают методологические проблемы с существующими подходами и/или указывают на распространенные недоразумения или плохие практики. В частности, наиболее успешные модели NLP в настоящее время полагаются на различные виды предварительно обученных представлений значений (от встраивания слов до моделей на основе трансформаторов, таких как BERT). Чтобы дополнить все истории успеха, было бы полезно увидеть, где и, возможно, почему они терпят неудачу. Добро пожаловать любые задачи NLP: маркировка последовательностей, вопросы и ответы, выводы, диалог, машинный перевод - вы называете это.",
     },
   },
   people: {
@@ -190,11 +196,11 @@ export const translations = {
   contact: {
     EN: {
       title: "Contact",
-      learnmore: "For general information about UMass Lowell, visit "
+      learnmore: "For general information about UMass Lowell, visit"
     },
     RU: {
       title: "Контакты",
-      learnmore: "Для получения общей информации об UMass Lowell посетите "
+      learnmore: "Для получения общей информации об UMass Lowell посетите"
     },
   },
   quail: {

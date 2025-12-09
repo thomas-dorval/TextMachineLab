@@ -110,7 +110,7 @@ export default function NavDropdown({ label, items, parentHref = "/" }: { label:
 
       <ul className="nav-dropdown__menu" role="menu" aria-label={label}>
         {items.map((it) => (
-          <li key={it.href} role="none">
+          <li className="nav-dropdown__item" key={it.href} role="none">
             <NavLink
               role="menuitem"
               to={it.href}

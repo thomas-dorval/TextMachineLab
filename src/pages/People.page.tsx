@@ -23,3 +23,4 @@ function People(): React.ReactElement {
 
 export default People;
 
+//<CollapsableCard title={t.} image="src/assets/people/default.png" link="" alt={t.Alt} content={t.Desc} tags={[]} buttons={[]} skillDesc="" projDesc="" pubDesc=""/>
