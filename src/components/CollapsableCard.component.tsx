@@ -9,7 +9,7 @@ interface ButtonData{
   href: string;
 }
 
-export default function CollapsableCard({ title, image, alt, content, tags, buttons, skillDesc, projDesc, pubDesc }: { title: string, image: string, alt: string, content: string, tags: string[], buttons: ButtonData[], skillDesc: string, projDesc: string, pubDesc: string }): React.ReactElement {
+export default function CollapsableCard({ title, image, link, alt, content, tags, buttons, skillDesc, projDesc, pubDesc }: { title: string, image: string, link: string, alt: string, content: string, tags: string[], buttons: ButtonData[], skillDesc: string, projDesc: string, pubDesc: string }): React.ReactElement {
   const [toggle, setToggle] = useState(false);
 
   const { language } = useLanguage();
@@ -22,7 +22,9 @@ export default function CollapsableCard({ title, image, alt, content, tags, butt
       </h2>
       {toggle && (
         <div className="card-content">
-            <img src={image} className="card-image" alt={alt}/>
+            <a href={link}>
+              <img src={image} className="card-image" alt={alt}/>
+            </a>
             <div className="card-description">{content}</div>
             <div className="card-buttons">{buttons.map((button, index) => (<a className="card-button" key={index} href={button.href} target="_blank" rel="noopener noreferrer">{button.label}</a>))}</div>
             <div className="card-tabs">

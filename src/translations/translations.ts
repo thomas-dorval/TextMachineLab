@@ -1,3 +1,5 @@
+import RuSentiment from "../pages/projects/RuSentiment.page";
+
 export const translations = {
   navbar: {
     EN: {
@@ -98,9 +100,35 @@ export const translations = {
   projects: {
     EN: {
       title: "Projects",
+      quail: "QuAIL",
+      quailAlt: "Image of a cartoon quail made of simple shapes sitting on a twig.",
+      quailDesc: "A new kind of question-answering dataset that combines commonsense, text-based, and unanswerable questions, balanced for different genres and reasoning types. Reasoning type annotation for 9 types of reasoning: temporal, causality, factoid, coreference, character properties, their belief states, subsequent entity states, event durations, and unanswerable. Genres: CC license fiction, Voice of America news, blogs, user stories from Quora 800 texts, 18 questions for each (~14K questions).",
+      rusentiment: "RuSentiment",
+      rusentimentAlt: "A simplistic cartoon blue matroshka doll with the word 'RuSentiment' next to it and a yellow speech bubble saying '~31k annotated Russian posts!' underneath.",
+      rusentimentDesc: "RuSentiment is a new high-quality dataset for sentiment analysis in Russian, enriched with active learning. We also present a lightweight annotation scheme for social media that ensures high speed and consistency, and can be applied to other languages (Russian and English versions released).",
+      rusentimentTags: ["Sentiment", "Social Media"],
+      conceptnorm: "Medical Concept Normalization",
+      conceptnormAlt: "'Cardiac infarction', 'MI', and 'Heart Attack' in a circle with gray arrows pointing between each other.'",
+      conceptnormDesc: "This project addresses the problem of normalization of medical records, i.e. mapping of clinical terms in medical notes to standardized medical vocabularies.",
+      conceptnormTags: ["Biomedical"],
+      twitterhawk: "TwitterHawk",
+      externalPages: "External Pages",
     },
     RU: {
       title: "Проекты",
+      quail: "QuAIL",
+      quailAlt: "Изображение мультяшного перепела, состоящего из простых форм, сидящего на ветке.",
+      quailDesc: "Новый тип набора данных для вопросов и ответов, который сочетает в себе вопросы здравого смысла, основанные на тексте, и неотвечаемые вопросы, сбалансированные для разных жанров и типов рассуждений. Аннотация типа рассуждений для 9 типов рассуждений: временные, причинные, фактоидные, кореференциальные, свойства персонажей, их состояния веры, последующие состояния сущностей, продолжительность событий и неотвечаемые. Жанры: лицензия CC fiction, новости Voice of America, блоги, пользовательские истории из Quora 800 текстов, 18 вопросов для каждого (~14K вопросов).",
+      rusentiment: "RuSentiment",
+      rusentimentAlt: "Простая мультяшная синяя матрешка с надписью 'RuSentiment' рядом и желтым речевым пузырем с надписью '~31k аннотированных русских постов!' внизу.",
+      rusentimentDesc: "RuSentiment - это новый высококачественный набор данных для анализа настроений на русском языке, обогащенный активным обучением. Мы также представляем легкую схему аннотации для социальных сетей, которая обеспечивает высокую скорость и согласованность и может быть применена к другим языкам (выпущены русская и английская версии).",
+      rusentimentTags: ["Настроение", "Социальные сети"],
+      conceptnorm: "Нормализация медицинских концепций",
+      conceptnormAlt: "'Кардиальный инфаркт', 'МИ' и 'Сердечный приступ' в круге с серыми стрелками, указывающими друг на друга.'",
+      conceptnormDesc: "Этот проект решает проблему нормализации медицинских записей, т.е. сопоставление клинических терминов в медицинских заметках со стандартизированными медицинскими словарями.",
+      conceptnormTags: ["Биомедицина"],
+      twitterhawk: "TwitterHawk",
+      externalPages: "Внешние страницы",
     },
   },
   events: {
@@ -113,20 +141,44 @@ export const translations = {
   },
   people: {
     EN: {
-      title: "People",
+      title1: "Current Members",
+      subtitle1: "Graduate Students",
+      subtitle2: "Interns",
+      title2: "Alumni",
       anna: {
         title: "Anna Rumshisky",
         alt: "Photo of Anna Rumshisky",
         label: "Website",
       },
+      vijeta: {
+        title: "Vijeta Deshpande",
+        alt: "Photo of Vijeta Deshpande",
+        content: "Hi folks, I’m Vijeta, a Research Assistant in the Text Machine Lab. My research explores how vocabulary shapes the language understanding and generation capabilities of large (and small) language models. I have a strong passion for working on sequential data and decision problems. Before starting my Ph.D., I earned an M.S. in Operations Research from UMass Amherst in 2019, where I focused on designing and evaluating health intervention policies.",
+        label1: "Email",
+        label2: "GitHub",
+        label3: "LinkedIn",
+        label4: "Google Scholar",
+      }
     },
     RU: {
-      title: "Люди",
+      title1: "Текущие участники",
+      subtitle1: "Аспиранты",
+      subtitle2: "Стажеры",
+      title2: "Выпускники",
       anna: {
         title: "Анна Румшицкий",
         alt: "Фото Анны Румшицкий",
         label: "Сайт",
       },
+      vijeta: {
+        title: "Виджета Дешпандэ",
+        alt: "Фото Виджеты Дешпандэ",
+        content: "Привет всем, я Виджета, научный сотрудник в лаборатории Text Machine Lab. Мои исследования изучают, как словарный запас формирует возможности понимания и генерации языка больших (и малых) языковых моделей. У меня есть сильная страсть к работе с последовательными данными и задачами принятия решений. Перед началом моей докторской степени я получил степень магистра в области исследований операций в UMass Amherst в 2019 году, где я сосредоточился на разработке и оценке политик вмешательства в области здравоохранения.",
+        label1: "Электронная почта",
+        label2: "GitHub",
+        label3: "LinkedIn",
+        label4: "Google Scholar",
+      }
     },
   },
   publications: {
@@ -140,9 +192,11 @@ export const translations = {
   contact: {
     EN: {
       title: "Contact",
+      learnmore: "For general information about UMass Lowell, visit "
     },
     RU: {
       title: "Контакты",
+      learnmore: "Для получения общей информации об UMass Lowell посетите "
     },
   },
   quail: {
