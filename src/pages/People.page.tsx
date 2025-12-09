@@ -4,11 +4,6 @@ import { translations } from "../translations/translations";
 import ImageCarousel from "../components/ImageCarousel.component";
 import CollapsableCard from "../components/CollapsableCard.component";
 
-interface ButtonData{
-  label: string;
-  href: string;
-}
-
 function People(): React.ReactElement {
   const { language } = useLanguage();
   const t = translations.people[language];
