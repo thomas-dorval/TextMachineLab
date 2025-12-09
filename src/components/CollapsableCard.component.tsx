@@ -9,10 +9,6 @@ interface ButtonData{
   href: string;
 }
 
-interface ButtonProps{
-  buttons: ButtonData[];
-}
-
 export default function CollapsableCard({ title, image, alt, content, tags, buttons, skillDesc, projDesc, pubDesc }: { title: string, image: string, alt: string, content: string, tags: string[], buttons: ButtonData[], skillDesc: string, projDesc: string, pubDesc: string }): React.ReactElement {
   const [toggle, setToggle] = useState(false);
 

@@ -9,10 +9,6 @@ interface ButtonData{
   href: string;
 }
 
-interface ButtonProps{
-  buttons: ButtonData[];
-}
-
 function People(): React.ReactElement {
   const { language } = useLanguage();
   const t = translations.people[language];
