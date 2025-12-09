@@ -188,9 +188,19 @@ export const translations = {
   publications: {
     EN: {
       title: "Publications",
+      pub1_25: "H. Auby, N. Shivagunde, A. Rumshisky, M. Koretsky. Using Machine Learning to Analyze Short-Answer Responses to Conceptually Challenging Chemical Engineering Thermodynamics Questions. 2024 ASEE Annual Conference & Exposition, Portland, Oregon.",
+      pub2_25: "V. Lialin, S. Muckatira, N. Shivagunde, A. Rumshisky. Relora: High-rank training through low-rank updates. The Twelfth International Conference on Learning Representations, 2023.",
+      pub3_25: "N. Shivagunde, V. Lialin, S. Muckatira, A. Rumshisky. Deconstructing In-Context Learning: Understanding Prompts via Corruption. LREC-COLING 2024.",
+      pub4_25: "S. Muckatira, V. Deshpande, V. Lialin, A. Rumshisky. Emergent Abilities in Reduced-Scale Generative Language Models. NAACL Findings 2024.",
+      pub5_25: "N. Shivagunde, M. Kulkarni, G. Karamanolakis, J. G. M. FitzGerald, Y. Versley, S. Soltan, V. Cevher, J. Lu, A. Rumshisky. Approximations may be all you need: Towards pre-training LLMs with low-rank decomposition and optimizers. NeurIPS 2024 Workshop on Efficient Natural Language and Speech Processing (ENLSP-IV) 2024.",
     },
     RU: {
       title: "Публикации",
+      pub1_25: "H. Auby, N. Shivagunde, A. Rumshisky, M. Koretsky. Использование машинного обучения для анализа кратких ответов на концептуально сложные вопросы по термодинамике химической инженерии. Ежегодная конференция и выставка ASEE 2024, Портленд, Орегон.",
+      pub2_25: "V. Lialin, S. Muckatira, N. Shivagunde, A. Rumshisky. Relora: обучение высокого ранга через обновления низкого ранга. Двенадцатая международная конференция по обучению представлениям, 2023.",
+      pub3_25: "N. Shivagunde, V. Lialin, S. Muckatira, A. Rumshisky. Деконструкция обучения в контексте: понимание подсказок через коррупцию. LREC-COLING 2024.",
+      pub4_25: "S. Muckatira, V. Deshpande, V. Lialin, A. Rumshisky. Возникающие способности в генеративных языковых моделях уменьшенного масштаба. NAACL Findings 2024.",
+      pub5_25: "N. Shivagunde, M. Kulkarni, G. Karamanolakis, J. G. M. FitzGerald, Y. Versley, S. Soltan, V. Cevher, J. Lu, A. Rumshisky. Приближения могут быть всем, что вам нужно: к предварительному обучению LLM с низкоранговым разложением и оптимизаторами. NeurIPS 2024 Workshop по эффективной обработке естественного языка и речи (ENLSP-IV) 2024.",
     },
   },
   contact: {
