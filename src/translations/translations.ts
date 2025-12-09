@@ -1,5 +1,3 @@
-import RuSentiment from "../pages/projects/RuSentiment.page";
-
 export const translations = {
   navbar: {
     EN: {
